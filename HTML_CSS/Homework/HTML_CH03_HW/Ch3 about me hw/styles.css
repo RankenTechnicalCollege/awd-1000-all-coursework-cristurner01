@@ -1,3 +1,5 @@
+/*    :D      */
+ 
 body {
   background-color: rgb(97, 100, 86);
   width: 80%;
@@ -14,15 +16,16 @@ header {
   border-radius: 20px;
 }
 main {
+  padding-bottom: 10px;
   border-radius: 20px;
   background-color: rgb(231, 227, 210);
 }
 .main-p {
-  display: inline-block
   position: static;
   border: solid; 
   border-radius: 20px;
-  width: 80%;
+  width: 90%;
+  margin: auto;
 }
 img {
   padding-top: 5px;
@@ -33,24 +36,26 @@ img {
 }
 
 .paragraph {
-  position: relative;
-  width: 35%;
-  min-width: 100%;
-  max-width: 100%;
-  float: right;
-  padding-left: 10;
+  width: 80%;
+  margin: auto;
 }
 
-.aside {
-  position: relative;
-  float: left;
-  padding:5%; 
-  min-width: 100%;
-  max-width: 100%;
-  width: 30%;
+.aside { 
+  width: 50%;
+  margin: auto;
+}
+ol {
+  padding-right: 30px
 }
 
 footer {
   background-color:rgb(231, 227, 210);
   border-radius: 20px;
+  height: 40px;
+  margin:10px auto;
+  width: 100%;
+}
+
+#copyr {
+  padding-top: 12px;
 }
