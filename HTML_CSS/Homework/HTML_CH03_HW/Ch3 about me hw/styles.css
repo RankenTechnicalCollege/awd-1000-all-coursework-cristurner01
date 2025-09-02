@@ -1,0 +1,56 @@
+body {
+  background-color: rgb(97, 100, 86);
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  border: solid;
+  border-radius: 20px;
+  padding: 20px;
+  font-family:"Courier New";
+}
+
+header {
+  background-color:rgb(231, 227, 210);
+  border-radius: 20px;
+}
+main {
+  border-radius: 20px;
+  background-color: rgb(231, 227, 210);
+}
+.main-p {
+  display: inline-block
+  position: static;
+  border: solid; 
+  border-radius: 20px;
+  width: 80%;
+}
+img {
+  padding-top: 5px;
+  border-radius: 80px;
+  max-width: 100%;
+  height: auto;
+
+}
+
+.paragraph {
+  position: relative;
+  width: 35%;
+  min-width: 100%;
+  max-width: 100%;
+  float: right;
+  padding-left: 10;
+}
+
+.aside {
+  position: relative;
+  float: left;
+  padding:5%; 
+  min-width: 100%;
+  max-width: 100%;
+  width: 30%;
+}
+
+footer {
+  background-color:rgb(231, 227, 210);
+  border-radius: 20px;
+}
