@@ -12,6 +12,7 @@ body {
 }
 
 header {
+  color: rgb(92, 126, 109);
   background-color:rgb(231, 227, 210);
   border-radius: 20px;
 }
