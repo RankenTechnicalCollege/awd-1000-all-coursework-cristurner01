@@ -1,0 +1,15 @@
+body {
+  border-style: solid;
+  width: 80%;
+  margin: 0 auto;
+}
+
+table {
+  border: 1px solid;
+  border-radius: 5px;
+  width: 100px;
+}
+
+th, td {
+  border: 1px solid
+}
