@@ -1,0 +1,123 @@
+/*
+Name: Cris Turner
+File: styles.css
+Date: 9/5/2025
+*/
+
+/*
+CSS Reset
+*/
+
+body,
+header,
+nav,
+main,
+footer,
+img,
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/*
+body
+*/
+body {
+    padding: 2%;
+    background-color: #d1d1e0;
+} 
+
+/*
+header
+*/
+
+header h1 {
+    font-size: 3em;
+    font-family: Georgia, Times, serif;
+    padding: 3%;
+    color: #47476b;
+    text-align: center;
+
+}
+
+/*
+nav
+*/
+
+nav {
+    background-color: #47476b;
+} 
+
+nav ul { 
+    margin: 0;
+} 
+
+nav li {
+    display: inline-block;
+    font-size: 1.5em; 
+    font-family: Verdana, Arial, sans-serif; 
+    font-weight: bold;
+    
+} 
+
+nav li a { 
+    display: block; 
+    color: #e3eaf8; 
+    padding: 0.5em 2em; 
+    text-decoration: none;
+}
+
+/*
+main
+*/
+
+main {
+    padding: 2%;
+    font-family: Geneva, Arial, sans-serif;
+    overflow: auto;
+} 
+
+#css1, 
+#css2, 
+#css3 {
+    width: 30%;
+    float: left;
+    padding: 0 1%;
+}
+
+main p {
+    font-size: 1.25em;
+}
+
+main h2 {
+    padding-top: 2%;
+    font-size: 2em;
+}
+
+main div p a {
+    color: #47476b;
+}
+
+/*
+footer
+*/
+
+footer {
+    clear:left;
+    text-align: center;
+    font-size: 0.85em;
+    color: #47476b;
+    padding: 1% 0;
+    border-top: 3px solid #47476b;
+}
+
+
+
+
+
+ 
+
+
+
