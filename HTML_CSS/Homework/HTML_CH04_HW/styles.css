@@ -1,15 +1,142 @@
 body {
-  border-style: solid;
+  background-color: rgb(59, 49, 41);
+}
+
+#newbody {
   width: 80%;
+  margin: 10px auto;
+  border-radius: 20px;
+}
+
+#header {
+  width: 100%;
+  height: 153px;
+  margin: 0, auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-image: url(images/game.jpg);
+}
+
+h1 {
+  width: 25%;
+  float: left;
+  margin: 20px 20px;
+  text-align: center;
+  color:antiquewhite;
+}
+
+nav {
+  width: 45%;
+  float: right;
+  margin: 35px 20px 0 0;
+  
+}
+nav > ul {
+  text-align: center;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 2px 15px;
+}
+
+li a {
+  text-decoration: none;
+  display:block;
+  background-color: rgba(64, 185, 201, 0.596);
+  border-radius: 5px;
+  padding: 5px;
+  color:antiquewhite;
+}
+
+li a:hover {
+  background-color: rgb(20, 19, 19);
+  border-color: rgba(0, 0, 0, 0);
+  color: white;
+}
+main {
+  clear: both;
+  background-color: rgb(29, 94, 91);
+}
+
+#plswork {
+  width: 100%;
+  height: 220px;
   margin: 0 auto;
+  background-color: rgb(29, 28, 28);
+  text-align: center;
+}
+
+div > p {
+  display: inline-block;
+  width: 85%;
+  border: 2px dashed;
+  border-radius: 5px;
+  padding: 10px 5px;
+  color: antiquewhite;
+}
+
+h2 {
+  margin: 0 auto;
+  background-color: rgb(36, 32, 32);
+  color: rgb(101, 130, 192);
+  height: 50px;
+  line-height: 50px;
+  border: 10px dashed;
+}
+
+img {
+  border-radius: 5px;
 }
 
 table {
-  border: 1px solid;
+  border: 1px solid rgb(158, 46, 61);
   border-radius: 5px;
   width: 100px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: lightsalmon;
 }
 
 th, td {
-  border: 1px solid
+  border: 1px solid rgb(187, 80, 94);
+  border-radius: 5px;
+  background-color: rgb(245, 239, 212);
+}
+
+footer {
+  text-align: center;
+  background-color: rgb(29, 28, 28);
+  color: antiquewhite;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 6px;
+}
+
+#favorites {
+  text-align: center;
+}
+
+.tables1, .tables2 {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px 0;
+}
+
+#tp, #warframe, #smg2 {
+  width: 260px;
+  display: inline-block;
+  margin: 0 2%;
+}
+
+#currently-playing {
+  text-align: center;
+}
+
+#OPT, #TBC, #stardew-valley {
+  width: 260px;
+  display: inline-block;
+  margin: 0 2%;
 }
