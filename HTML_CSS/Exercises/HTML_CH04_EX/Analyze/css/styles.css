@@ -39,7 +39,6 @@ header h1 {
     padding: 3%;
     color: #47476b;
     text-align: center;
-
 }
 
 /*
@@ -52,6 +51,7 @@ nav {
 
 nav ul { 
     margin: 0;
+    text-align: center;
 } 
 
 nav li {

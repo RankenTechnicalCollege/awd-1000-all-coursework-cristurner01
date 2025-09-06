@@ -14,7 +14,7 @@ body {
   margin: 0 auto;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  background-image: url(images/game.jpg);
+  background-image: radial-gradient(circle at 4% 15%, #eee 0%, #eee 1.5%, transparent calc(1.5% + 1px), transparent 100%), radial-gradient(circle at 4% 50%, #eee 0%, #eee 1.5%, transparent calc(1.5% + 1px), transparent 100%), radial-gradient(circle at 4% 85%, #eee 0%, #eee 1.5%, transparent calc(1.5% + 1px), transparent 100%), linear-gradient(90deg, transparent 0%, transparent 10%, #DB676C 10%, #DB676C calc(10% + 2px), transparent calc(10% + 2px), transparent 100%), linear-gradient(180deg, white 12%, transparent 12%), repeating-linear-gradient(180deg, #91C1E1 0px, #91C1E1 1px, transparent 1px, transparent 30px), linear-gradient(white,white);
 }
 
 h1 {
@@ -23,7 +23,7 @@ h1 {
   margin: 20px 20px;
   text-align: center;
   color:#faead6;
-  text-shadow: 2px 2px #1dbaf8;
+  text-shadow: 2px 2px #31373a;
 }
 
 nav {
@@ -46,7 +46,7 @@ nav ul li {
 li a {
   text-decoration: none;
   display:block;
-  background-color: rgba(64, 185, 201, 0.596);
+  background-color: rgba(40, 56, 80, 0.596);
   border: 1px solid rgba(0, 0, 0, 0.445);
   border-radius: 2px;
   padding: 5px;
@@ -82,7 +82,7 @@ div > p {
 
 h2 {
   margin: 0 auto;
-  background-color: rgb(14, 13, 13);
+  background-image: radial-gradient(circle at 4% 15%, #eee 0%, #eee 1.5%, transparent calc(1.5% + 1px), transparent 100%), radial-gradient(circle at 4% 50%, #eee 0%, #eee 1.5%, transparent calc(1.5% + 1px), transparent 100%), radial-gradient(circle at 4% 85%, #eee 0%, #eee 1.5%, transparent calc(1.5% + 1px), transparent 100%), linear-gradient(90deg, transparent 0%, transparent 10%, #DB676C 10%, #DB676C calc(10% + 2px), transparent calc(10% + 2px), transparent 100%), linear-gradient(180deg, white 12%, transparent 12%), repeating-linear-gradient(180deg, #91C1E1 0px, #91C1E1 1px, transparent 1px, transparent 30px), linear-gradient(white,white);
   color: rgb(101, 130, 192);
   height: 100px;
   line-height: 100px;
