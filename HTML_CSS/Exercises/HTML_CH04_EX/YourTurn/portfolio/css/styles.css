@@ -44,6 +44,7 @@ body {
   border-radius: 10px;
   background-color: #e6e7e1c9;
   backdrop-filter: blur(5px);
+  box-shadow: rgba(16, 145, 91, 0.445) 0px 54px 55px, rgba(0, 240, 148, 0.281) 0px -12px 30px, rgba(131, 241, 217, 0.651) 0px 4px 6px, rgba(39, 250, 134, 0.678) 0px 12px 13px, rgba(21, 209, 200, 0.651) 0px -3px 5px;
 }
 header, main {
   display:inline-block;
@@ -103,7 +104,7 @@ nav li {
   margin: 2px 0;
   border-radius: 10px;
   background-color: #e6e7e1be;
-
+  box-shadow: rgba(64, 207, 124, 0.37) 0px 2px 1px, rgba(38, 161, 89, 0.384) 0px 4px 2px, rgba(50, 163, 101, 0.37) 0px 8px 4px, rgba(20, 56, 36, 0.377) 0px 16px 8px, rgba(73, 194, 164, 0.514) 0px 32px 16px;
   
 }
 
