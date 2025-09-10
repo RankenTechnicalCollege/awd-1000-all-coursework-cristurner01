@@ -12,17 +12,38 @@ body, header, nav, main, footer, img, h1 {
 }
 
 body {
+  background-image: url(../images/leaves.png);
+  font-family: 'Courier New', Arial, sans-serif;
+  background-size: cover;
+  
+}
+
+#blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  backdrop-filter: blur(5px);
+}
+
+.container {
   max-width:700px;
   margin:0 auto;
+  
 }
 
 /* header and main together */
 #pleasework{
   margin: 0 auto;
   text-align: center;
-  max-width: 700px;
+  max-width: 600px;
   padding: 10px;
   border: 2px solid;
+  border-radius: 10px;
+  background-color: #e6e7e1c9;
+  backdrop-filter: blur(5px);
 }
 header, main {
   display:inline-block;
@@ -33,13 +54,13 @@ header, main {
 img {
   max-width: 100%;
   display: block;
+  border-radius: 10px;
 }
 
 /* header */
 header {
   width: 270px;
   margin: 0 auto;
-  border: 1px solid;
 }
 
 #me-and-h3 {
@@ -66,20 +87,29 @@ h3 {
 
 /* nav */
 nav ul {
-  background-color: #7a9e18;
-  width: 250px;
+  
+  width: 280px;
   padding: 0;
   list-style-type: none;
-  margin-left: 2%;
+  margin-left: 5%;
   margin-bottom: 10px;
   text-align: center;
-  border: 1px solid;
+  
 }
 
 nav li {
   display: inline-block;
+  border: 1px solid;
+  margin: 2px 0;
+  border-radius: 10px;
+  background-color: #e6e7e1be;
+
+  
 }
 
+nav li:hover {
+  background-color: #9aff5fa1;
+}
 nav li a {
   display: block;
   color:#000000;
@@ -92,7 +122,7 @@ nav li a {
 main{
   width:270px;
   margin: 10px 10px;
-  border: 1px solid;
+  border: 4px dotted;
 }
 
 p {
