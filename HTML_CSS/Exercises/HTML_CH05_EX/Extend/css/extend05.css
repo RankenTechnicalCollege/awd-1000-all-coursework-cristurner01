@@ -1,0 +1,51 @@
+/* 
+Style sheet created by: 
+Cris Turner 
+Sept 11, 2025 
+*/
+body {
+    background-color: #dde3fd;
+}
+
+#container {
+    padding-bottom: 500px;
+}
+
+.box {
+    border: 1px solid #000;
+    margin: 2%;
+    padding: 2%;
+    background-color: #798ef6;
+    color: #091034;
+    width: 400px;
+    height: 170px;
+}
+
+/* sticky */
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 70;
+}
+
+/* relative */
+.relative {
+    position: relative;
+    top: 30px;
+    left: 40px;
+}
+
+/* fixed */
+.fixed {
+    position:fixed;
+    top: 90px;
+    right: 10px;
+}
+
+/* absolute */
+.absolute {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}
