@@ -1,0 +1,176 @@
+/*
+Author: Cris Turner
+File: styles.css
+Date: Sept 9, 2025
+*/
+
+/* CSS Reset */
+body, header, nav, main, footer, img, h1, h3, ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  background-image: url(../images/leaves.png);
+  font-family: 'Courier New', Arial, sans-serif;
+  background-size: cover;
+}
+
+#blur {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1100px;
+  z-index: 999;
+  backdrop-filter: blur(5px);
+}
+
+.container {
+  max-width:90%;
+  margin:0 auto;
+  
+}
+
+/* Style rules for mobile viewport */
+    /* nothings changed*/
+/* Show mobile class and hide tab-desk class */
+    /* nothings changed, it was pretty minimal to begin with*/
+
+
+/* mostly just changed some sizing and font/text styling and the nav area*/
+
+/* header and main together */
+.pleasework{
+  margin: 0 auto;
+  text-align: center;
+  max-width: 600px;
+  padding: 10px;
+  border: 2px solid;
+  border-radius: 10px;
+  background-color: #e6e7e1c9;
+  backdrop-filter: blur(5px);
+  box-shadow: rgba(16, 145, 91, 0.445) 0px 54px 55px, rgba(0, 240, 148, 0.281) 0px -12px 30px, rgba(131, 241, 217, 0.651) 0px 4px 6px, rgba(39, 250, 134, 0.678) 0px 12px 13px, rgba(21, 209, 200, 0.651) 0px -3px 5px;
+}
+header, main {
+  display:inline-block;
+  vertical-align: middle;
+}
+
+/* img */
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+/* header */
+header {
+  width: 290px;
+  margin: 0 auto;
+}
+
+#me-and-h3 {
+  width:290px;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Bitcount Grid Double";
+  font-weight: normal;
+}
+
+h3 {
+  display: inline-block;
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  width: 12%;
+  height: 35%;
+  margin: 0;
+  font-size: 20px;
+  font-family: "Bitcount Grid Double";
+  font-weight: normal;
+}
+
+#me {
+  width:231px;
+  display: inline-block;
+}
+
+/* nav */
+nav {
+  max-width: 600px;
+  margin:0 auto;
+}
+
+nav ul {
+  
+  width: 100%;
+  padding: 0;
+  list-style-type: none;
+  margin: 2% 0;
+  margin-bottom: 10px;
+  text-align: center;
+  
+}
+
+nav li {
+  display: inline-block;
+  width: 150px;
+  border: 1px solid;
+  margin: 2px 0;
+  border-radius: 10px;
+  background-color: #e6e7e1be;
+  box-shadow: rgba(64, 207, 124, 0.37) 0px 2px 1px, rgba(38, 161, 89, 0.384) 0px 4px 2px, rgba(50, 163, 101, 0.37) 0px 8px 4px, rgba(20, 56, 36, 0.377) 0px 16px 8px, rgba(73, 194, 164, 0.514) 0px 32px 16px;
+  font-size: 20px;
+  font-family: "Bitcount Grid Double";
+  font-weight: 100;
+}
+
+nav li:hover {
+  background-color: #9aff5fa1;
+}
+nav li a {
+  display: block;
+  color:#000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* main */
+main{
+  width:270px;
+  margin: 10px auto;
+  border: 4px dotted;
+}
+
+#about li {
+  list-style-type: none;
+}
+
+main h2 {
+  font-family: "Bitcount Grid Double";
+  font-weight: normal;
+}
+
+p {
+  font-size: 16px;
+}
+
+iframe {
+  width: 200px;
+  height: 200px;
+  border: 2px solid;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* footer */
+
+footer a {
+  font-size: 14px;
+}
