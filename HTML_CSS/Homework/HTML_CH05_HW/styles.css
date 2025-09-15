@@ -18,37 +18,128 @@ body, header, nav, main, footer, img, h1, h3, h2, ul {
     font-family: 'Back-Honey';
     src: url(fonts/BackHoneyRegular-vnyjO.ttf) format('truetype');
 }
+@font-face {
+    font-family: "Vintage Decorative";
+    src: url(fonts/VintageDecorativeSigns-wq1Z.ttf);
+}
+@font-face {
+    font-family: "Corners";
+    src: url(fonts/VintageDecorativeCorner37-0rDr.ttf);
+}
+
+
+/* MEDIA QUERIES START */
+@media screen and(min-width: 768px){
+    h1 {font-size: 16px;}
+    nav {
+        display: block;
+
+    }
+}
+
+
+
+/* Style for decoration */
+.info1 .decoration1 {
+    right: -70px
+}
+
+.corner1 {
+    font-family: "Corners";
+    font-size: 3.5rem;
+    position:relative;
+    bottom: 11px;
+    right: 6px;
+    margin:0;
+    height: 20px;
+    color: rgb(253, 212, 135);
+}
+
+.corner2 {
+    font-family: "Corners";
+    font-size: 3.5rem;
+    position:relative;
+    color: rgb(253, 212, 135);
+    margin:0;
+    height: 20px;
+    top: 11px;
+    left: 6px;
+    transform: scale(-1);
+}
+
+.decoration1 {
+    font-family: "Vintage Decorative";
+    font-size: 8rem;
+    height: 30px;
+    margin:0;
+    position:relative ;
+    top: -95px;
+    left: 0px;
+    color: rgb(253, 212, 135);
+    text-shadow: 2px 2px 5px rgb(255, 72, 0);
+}
+
+.decoration2a {
+    font-family: "Vintage Decorative";
+    font-size: 8rem;
+    height: 30px;
+    margin:0;
+    padding-bottom: 20px;
+    position:relative ;
+    top: 68px;
+    left: 0px;
+    color: rgb(253, 212, 135);
+    transform: scale(-1);
+    text-shadow: 2px 2px 5px rgb(255, 72, 0);
+}
+
+.decoration2b {
+    font-family: "Vintage Decorative";
+    font-size: 8rem;
+    height: 30px;
+    margin:0;
+    position:relative ;
+    top: -83px;
+    left: 0px;
+    color: rgb(253, 212, 135);
+    text-shadow: 2px 2px 5px rgb(255, 72, 0);
+}
 
 /* Style rules for body and images */
+
 body {
     background-image: url(images/deathmount.webp);
     background-size: cover;
     background-repeat: no-repeat; 
     backdrop-filter: saturate(0.2);
-    height: 1000px;
+    height: 1190px;
     margin: 0;
+    padding-bottom: 20px;
     
 }
 .container1 {
     position: relative;
-    border: 2px solid;
     max-width: 1000px;
     margin: 0 auto;
     top: 40px;
     background-color: rgb(7, 7, 7);
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .section1 img {
     max-width: 35%;
     height:auto;
+    padding-top: 40px;
 }
 
 .heart{
     max-width: 200px;
     height:auto;
     float:right;
-    margin-top: 80px;
-    margin-right:2.1rem;
+    margin-top: 160px;
+    margin-right:3rem;
+    z-index: 999;
 }
 
 .banner {
@@ -58,13 +149,22 @@ body {
     background-position: 0cm;
     background-size: cover;
 }
+
+.con-section1 img {
+    border: 1px solid rgb(211, 159, 91);
+    border-radius: 5px;
+}
 /* Style rules for nav */
+
 nav ul{
-    width: 95%;
+    background-color: rgb(16, 16, 17);
+    width: 100%;
     margin: 0 auto;
     text-align: center;
     border-bottom: 2px solid;
     padding: 10px;
+    position: absolute;
+    z-index: 999;
 }
 
 nav ul li {
@@ -75,21 +175,23 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: rgba(231, 215, 162, 0.87);;
+    color: rgba(255, 236, 173, 0.87);;
     font-size: 1.3rem;
 }
 
 nav ul li :hover {
-    color: rgb(236, 171, 97);
-    text-shadow: 2px 2px 5px rgb(238, 132, 90);
+    color: rgb(255, 240, 200);
+    text-shadow: 2px 2px 5px rgb(255, 72, 0);
+    text-decoration: overline;
 }
 
 /* Style rules for header */
 .headerimg {
     background-image: url(images/botw-hotspring.webp);
-    mask-image: linear-gradient(to bottom, rgb(170, 79, 79), rgba(0, 0, 255, 0) 173px 172px);
+    mask-image: linear-gradient(to bottom, rgb(170, 79, 79), rgba(0, 0, 255, 0) 172px);
     background-position: 0cm;
     width: 100%;
+    top: 40px;
     height: 170px;
     position: relative;
 }
@@ -108,11 +210,11 @@ header h1 {
     position: relative;
     z-index: 99;
     padding: 20px;
-    color: rgb(255, 226, 173);
+    color: rgb(255, 235, 198);
     font-family: 'Back-Honey';
     font-weight: 100;
     font-size: 4rem;
-    text-shadow: 2px 2px 4px rgb(241, 174, 174);
+    text-shadow: 2px 2px 4px rgb(255, 195, 167);
     text-shadow: 0px 0px 2px 6px rgb(238, 0, 0);
 }
 
@@ -133,8 +235,10 @@ header h3 {
     border-bottom-right-radius: 30px;
     width: 640px;
     margin: 30px 0;
+    margin-top: 70px;
     border-color: rgb(223, 180, 100);
     float:left;
+    text-align: center;
 }
 
 .section1 img, .info1 {
@@ -170,6 +274,17 @@ header h3 {
     
 }
 
+.con-section1 {
+    border: 1px solid;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    border-color: rgb(223, 180, 100);
+}
+
 .banner {
     width: 100%;
 
@@ -181,13 +296,14 @@ h2 {
     font-weight: 100;
     font-size:1.7rem;
     word-spacing: .1rem;
-    text-shadow: 2px 2px 5px rgba(233, 184, 169, 0.61);
+    text-shadow: 2px 2px 5px rgba(233, 75, 27, 0.61);
 }
 
 main p {
    color: rgba(231, 215, 162, 0.87); 
    font-family: "IM Fell French Canon SC", serif;
    font-weight: 400;
+   margin-top:5px;
 }
 
 
@@ -195,9 +311,11 @@ main p {
 footer {
     text-align: center;
     margin: 0 auto;
-    margin-bottom: 10px;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
     width: 90%;
-    color: rgba(231, 215, 162, 0.87);
+    color: rgb(255, 236, 175);
+    text-shadow: 2px 2px 5px rgb(250, 133, 86);
 }
 
 
