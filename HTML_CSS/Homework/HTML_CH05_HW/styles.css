@@ -28,14 +28,7 @@ body, header, nav, main, footer, img, h1, h3, h2, ul {
 }
 
 
-/* MEDIA QUERIES START */
-@media screen and(min-width: 768px){
-    h1 {font-size: 16px;}
-    nav {
-        display: block;
 
-    }
-}
 
 
 
@@ -318,4 +311,16 @@ footer {
     text-shadow: 2px 2px 5px rgb(250, 133, 86);
 }
 
+/* MEDIA QUERIES START */
+@media screen and(min-width: 768px) {
+    .heart {
+        display: none;
+    }
+    h1 {
+        font-size: 16px;
+    }
+    nav ul li {
+        display: block;
 
+    }
+}
