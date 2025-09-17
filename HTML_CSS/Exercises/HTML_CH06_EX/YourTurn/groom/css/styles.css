@@ -1,0 +1,151 @@
+/*
+Author: Cris Turner
+File: styles.css
+Date: Sept 9, 2025
+*/
+
+/* CSS Reset */
+body, header, nav, main, footer, img, h1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Style rules for mobile viewport  */
+
+/* Show mobile class and hide tab-desk class */
+.tab-desk {
+    display:none;
+}
+
+/* body */
+body {
+    background-image: url('../images/doggy.jpg');
+    font-family: Verdana, Arial, sans-serif;
+}
+
+.duhbody {
+    margin: 0 auto;
+    margin-top: 5%;
+    width: 100%;
+}
+
+/* image */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* header */
+header {
+    border: 3px solid rgb(230, 165, 27);
+    text-align: center;
+    padding: 0 8%;
+    margin: 0 auto;
+    background-color: rgba(255, 253, 248, 0.89);
+    backdrop-filter: blur(5px);
+}
+header h1 {
+    color: brown;
+    font-family: "Snowburst One";
+    padding-top: 15px;
+}
+
+header h3 {
+    margin: 0;
+    font-family: "Kirang Haerang";
+    padding-bottom: 10px;
+    color: rgb(50, 78, 100);
+}
+
+/* nav */
+nav {
+    background-color: rgba(255, 253, 248, 0.945);
+    backdrop-filter: blur(5px);
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+}
+nav ul li {
+    padding: 10px 0;;
+    border-top: 2px solid;
+    border-color: rgb(226, 158, 32);
+    display: block;
+    font-family: "Snowburst One";
+    font-weight: 600;
+}
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+nav ul li a:hover {
+    text-decoration: underline blue 2px;
+    text-underline-offset: 4px;
+}
+
+/* main */
+main{
+    clear: both;
+    border: 1px solid rgb(212, 115, 24);
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 20px;
+    background-color: rgba(255, 253, 248, 0.562);
+    backdrop-filter: blur(5px);
+}
+
+.pizazz{
+    font-family: "Snowburst One";
+    font-size: 1.5em;
+    color: brown;
+    font-weight: 600;
+}
+#services img{
+    border-radius: 10px;
+    margin: 10px 5px;
+    width: 90%;
+    margin: 10px auto;
+}
+
+#services ul {
+    padding: 0;
+    margin: 0;
+}
+#services li {
+    list-style-type: none;
+}
+
+#contact a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+iframe {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px 0;
+    width: 80%;
+    height: 315px;
+}
+
+/* footer */
+footer {
+    border: 1px solid rgb(204, 169, 12);
+    border-radius: 10px;
+    text-align: center;
+    padding: 3px 0;
+    margin: 5px 20px;
+    background-color: rgba(255, 253, 248, 0.589);
+    backdrop-filter: blur(5px);
+}
+footer p {
+    margin: 2px;
+    list-style-type: none;
+}
