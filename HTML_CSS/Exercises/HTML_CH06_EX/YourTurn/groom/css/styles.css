@@ -85,20 +85,20 @@ nav ul li a {
     text-decoration: none;
     color: black;
 }
-nav ul li a:hover {
-    text-decoration: underline blue 2px;
-    text-underline-offset: 4px;
-}
+
 
 /* main */
 main{
     clear: both;
     border: 1px solid rgb(212, 115, 24);
-    border-radius: 10px;
     text-align: center;
-    margin: 0 20px;
-    background-color: rgba(255, 253, 248, 0.562);
+    margin: 0 auto;
+    background: linear-gradient(to bottom right,rgba(0, 204, 255, 0.473), rgba(238, 233, 233, 0.479) 60%);
     backdrop-filter: blur(5px);
+}
+
+#info {
+    margin: 0 20px;
 }
 
 .pizazz{
@@ -148,4 +148,70 @@ footer {
 footer p {
     margin: 2px;
     list-style-type: none;
+}
+
+/* MEDIA QUERIES */
+/* Tablet media query */
+@media screen and (min-width: 600px), print {
+    .tab-desk {
+        display:block;
+    }
+
+    nav ul li{
+        display: inline-block;
+        border: none;
+        padding: 10px;
+        border-right: 2px solid rgb(255, 195, 65);
+    }
+    nav ul li:last-child {
+        border-right: 0;
+    }
+    
+    .list1, .list2{
+        display: inline-block;
+        width: 40%;
+    }
+    .dog1, .dog2 {
+        max-width: 40%;
+        display: inline-block;
+        padding: 10px 20px;
+        max-height: 350px;
+        object-fit: cover;
+    }
+    #services img{
+    border-radius: 10px;
+    }
+}
+/* Desktop media query */
+@media screen and (min-width: 992px), print {
+    #info p {
+        display:inline-block;
+        max-width: 300px;
+        vertical-align: top;
+    }
+    .duhbody {
+        width: 90%;
+    }
+    nav ul {
+        perspective: 100px;
+    }
+    nav ul li:hover {
+        background-color: rgb(255, 195, 128);
+        transform: translateZ(2px);
+}
+}
+
+/* Large desktop media query */
+@media screen and (min-width: 1700px ), print {
+    .duhbody {
+        width: 80%;
+    }
+}
+
+/* Print media query */
+@media print {
+    body {
+        background-color: white;
+        color: black;
+    }
 }
