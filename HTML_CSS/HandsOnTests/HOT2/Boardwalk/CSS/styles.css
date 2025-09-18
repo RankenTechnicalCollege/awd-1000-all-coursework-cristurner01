@@ -1,0 +1,190 @@
+/* Cris Turner, Sept 18, 2025, styles.css */
+
+/* CSS Reset */
+body, header, nav, main, footer {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY STYLE RULES */
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #f4f4f4;
+}
+
+/* GLOBAl STYLES */
+
+
+/* HEADER STYLE RULES */
+header {
+  color: rgb(126, 180, 216);
+  background-color: rgb(16, 18, 29);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+}
+h1 {
+  grid-area: 1 / 1 / 2 / 2;
+  padding-left: 20px;
+}
+
+/* NAV STYLE RULES */
+nav {
+  grid-area: 1 / 2 / 2 / 4;
+}
+nav ul {
+  text-align: center;
+  padding: 0;
+}
+nav li {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0 30px;
+}
+nav li:first-child {
+  margin-left: 5px;
+}
+nav li:last-child {
+  margin-right: 5px;
+}
+nav li a {
+  text-decoration: none;
+  color: white;
+}
+nav li:hover {
+  background-color: rgba(117, 15, 66, 0.658);
+  border-radius: 20px;
+}
+
+/* MAIN STYLE RULES */
+/* Hero */
+#hero {
+  display:grid;
+  grid-template-columns: 1fr .5fr;
+  grid-template-rows: 1fr;
+  background-image: url(../images/boardwalk.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+}
+#hero .heroinfo {
+  grid-area: 1 / 2 / 2 / 3;
+}
+#hero h2 {
+  color: rgb(112, 172, 241);
+  text-align: center;
+  font-size: 2.8em;
+  text-shadow: 3px 3px 5px rgb(11, 0, 168);
+  margin: 0 auto;
+}
+#hero p {
+  color: white;
+  background-color: black;
+  text-align: center;
+  width: 210px;
+  font-size: 1.1em;
+  margin: 5px auto;
+  border-radius: 5px;
+}
+/* About */
+#about {
+  display: block;
+  margin: 50px 0px;
+}
+#about::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#about p {
+  float: right;
+  width: 30%;
+  font-size: 1.6em;
+  line-height: 40px;
+  padding-right: 10%;
+  padding-top: 50px;
+  text-align: center;
+}
+#about p a {
+  font-size: .8em;
+  text-decoration: none;
+  background-color: rgb(90, 138, 206);
+  color: aliceblue;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+#about img {
+  border-radius: 10px;
+  margin-left:6%;
+  float:left;
+  max-width: 50%;
+  
+}
+
+/* Menu preview */
+#menu-preview {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 8px;
+  grid-row-gap: 5px;
+  margin: 0 auto;
+  width:80%;
+  background-color: rgb(155, 90, 61);
+  border-radius: 10px;
+}
+#menu-preview h3 {
+  grid-area: 1 / 1 / 2 / 4;
+  text-align: center;
+  font-size: 2em;
+  margin: 5px 0;
+  color:rgb(243, 235, 224);
+  text-shadow: 2px 2px 2px black;
+}
+.menu-item {
+  background-color: rgb(233, 222, 206);
+  margin: 10px 20px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px black;
+  text-align: center;
+}
+.menu-item p span {
+  color:rgb(138, 18, 18);
+  font-weight: bold;
+}
+.one {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.two {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.three {
+  grid-area: 2 / 3 / 3 / 4;
+}
+
+/* Location */
+#location {
+  background-color: rgb(185, 170, 156);
+}
+#location::after{
+  content: "";
+  display: table;
+}
+#location p {
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+  padding:20px 0px;
+}
+#location iframe {
+  display: block;
+  margin: 20px auto;
+  border: 2px solid black;
+  height: 300px;
+  width: 70%;
+  margin-bottom: 60px;
+}
+
+/* FOOTER STYLE RULES */
