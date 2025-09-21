@@ -1,5 +1,7 @@
 
-
+body{
+  background-image: url(../images/cool-start-page/body-bg.jpg);
+}
 .start-container {
 display: grid;
 grid-template-columns: .8fr repeat(5, 1fr) .8fr;
@@ -8,7 +10,6 @@ grid-column-gap: 0px;
 grid-row-gap: 5px;
 width:100%;
 height:900px;
-border: 1px solid;
 }
 /* Header */
 header { 
@@ -16,7 +17,9 @@ header {
 }
 h1 {
   text-align: center;
-  vertical-align: middle;
+  color: antiquewhite;
+  font-size: 3.2em;
+  text-shadow: 1px 1px 6px rgba(255, 166, 0, 0.747);
 }
 
 /* main of start grid*/
@@ -32,23 +35,100 @@ h1 {
   grid-template-rows: 1.3fr repeat(2, 1fr) .5fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  background-image: url(../images/cool-start-page/chappel-thingy.jpg);
+  background-position: center;
+  background-size: cover;
+  box-shadow: 2px 2px 50px;
   }
+
+  
+/* my name n stuff*/
 
 .start-area { 
   grid-area: 1 / 1 / 5 / 5; 
   width: 100%;
   height:500px;
 }
-figure { 
-  grid-area: 1 / 1 / 5 / 3; 
+section {
+  height: 200px;
+  width: 100%;
+  margin: 0 auto;
+  transform: rotate(-10deg);
 }
+section h2{
+  position: fixed;
+  top: 140px;
+  left: 13%;
+  color:antiquewhite;
+  vertical-align: bottom;
+  font-size: 3.6em;
+  padding-left: 20px;
+  text-align: center;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.932);
+}
+/**/
+figure { 
+  grid-area: 1 / 1 / 5 / 3;
+  display:flex;
+  align-items:center; 
+  margin: 0;
+  max-width: 330px;
+}
+figure img{
+  transform: rotate(15deg);
+}
+/* NAV */
 .navigation { 
   grid-area: 2 / 2 / 4 / 4; 
-  text-align: center;
+  display: table;
 }
+nav{
+  transform: rotate(-10deg) scale(1.6);
+  margin: 0 auto;
+  display: table-cell;
+  vertical-align: middle ;
+  margin-left: 15px;
+}
+nav ul {
+  width: 240px;
+}
+nav ul li {
+  list-style: none;
+  background-image: url(../images/cool-start-page/navlibg.png);
+  background-size: contain;
+  padding: 5px 0;
+  padding-left: 40px;
+  width:200px;
+  margin:5px;
+  
+}
+nav ul li a{
+  text-decoration: none;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(255, 166, 0, 0.747);
+}
+nav ul li:hover{
+  background-image: url(../images/cool-start-page/navlibghover.png);
+  padding-left: 60px;
+  width: 200px;
+}
+nav li:hover a{
+  color: black;
+  text-shadow: 1px 1px 4px rgb(27, 36, 46);
+}
+
 
 /* Footer */
 footer { 
   grid-area: 3 / 1 / 4 / 8; 
   text-align: center;
+}
+footer p {
+  color: antiquewhite;
+  width:90%;
+  margin: 30px auto;
+  padding:10px 0;
+  font-size: 1.2em;
+  text-shadow: 1px 1px 6px rgba(255, 166, 0, 0.747);
+  background-color: rgba(5, 2, 12, 0.384);
 }
