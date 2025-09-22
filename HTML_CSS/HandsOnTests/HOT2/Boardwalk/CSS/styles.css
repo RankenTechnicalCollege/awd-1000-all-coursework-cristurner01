@@ -1,19 +1,48 @@
 /* Cris Turner, Sept 18, 2025, styles.css */
 
-/* CSS Reset */
-body, header, nav, main, footer {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
-/* BODY STYLE RULES */
-body {
-  font-family: 'Times New Roman', Times, serif;
-  background-color: #f4f4f4;
-}
 
 /* GLOBAl STYLES */
+  /* CSS Reset */
+  body, header, nav, main, footer {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  /* BODY STYLE RULES */
+  body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f4f4f4;
+  }
+
+/* Fonts */
+@font-face {
+  font-family: "Sabresha";
+  src: url(../fonts/Sabresha-8OxXM.otf);
+}
+@font-face {
+  font-family: "Every Run";
+  src: url(../fonts/EveryRunRegular-ZV5pK.ttf);
+}
+
+h1, h2, h3 {
+  font-family: "Every Run";
+}
+.cafe {
+  font-family: "Sabresha";
+}
+
+p {
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Ariel MS', sans-serif;
+}
+h3 {
+  color:#2298e7;
+  font-size: 1.5em;
+  text-shadow: 2px 2px 3px black;
+}
+nav ul a {
+  font-family:'Gill Sans', 'Gill Sans MT', "Arial", sans-serif;
+}
 
 
 /* HEADER STYLE RULES */
@@ -28,14 +57,20 @@ h1 {
   grid-area: 1 / 1 / 2 / 2;
   padding-left: 20px;
 }
+#hero p {
+  font-family: 'Times New Roman', Times, serif;
+}
 
 /* NAV STYLE RULES */
 nav {
   grid-area: 1 / 2 / 2 / 4;
+  display: flex;
+  align-items: center;
 }
 nav ul {
   text-align: center;
   padding: 0;
+  height: auto;
 }
 nav li {
   display: inline-block;
@@ -168,26 +203,134 @@ nav li:hover {
 }
 
 /* Location */
-#location {
-  background-color: rgb(185, 170, 156);
+#location, #contact {
+  background-color: rgb(197, 200, 204);
 }
 #location::after{
   content: "";
   display: table;
 }
+
+#location h3{
+  text-align: center;
+  padding-top: 20px;
+}
+
 #location p {
   font-weight: bold;
   font-size: 1.5rem;
   text-align: center;
   padding:20px 0px;
 }
+
 #location iframe {
   display: block;
   margin: 20px auto;
   border: 2px solid black;
   height: 300px;
   width: 70%;
-  margin-bottom: 60px;
 }
 
+/* Contact */
+#contact {
+  text-align: center;
+  padding: 5%;
+}
+
+.contact-info {
+  margin: 0 auto;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  max-width: 70%;
+  padding: 5%;
+  box-shadow: 2px 2px 6px;
+}
+
+.contact-info p a {
+  text-decoration: none;
+  color:rgb(160, 12, 12)
+}
+
+
 /* FOOTER STYLE RULES */
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 2%;
+}
+
+@media screen and (max-width: 1029px) {
+  #about p {
+    padding-top: 5px;
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (max-width: 836px) {
+  #about p {
+    font-size: 1.1em;
+  }
+  #about img {
+  margin-left:10%;
+  margin-top: 5%;
+  max-width: 44%;
+  }
+
+#menu-preview {
+  width: 90%;
+  }
+.menu-item {
+  margin:10px 5px;
+  }
+
+#menu-preview p {
+  font-size:.84em;
+  }
+}
+@media screen and (max-width: 720px) {
+  header {
+    display: block;
+    padding-top:10px;
+  }
+  header h1 {
+    text-align: center;
+    margin-bottom: 0px;
+    padding: 0;
+  }
+  nav{
+    display: block;
+    width:100%;
+    text-align: center;
+  }
+  nav ul {
+    margin: 0 auto;
+    padding: 10px 0;
+  }
+  nav ul li {
+    margin: 0 12px;
+  }
+}
+@media screen and (max-width: 707px) {
+  #about p {
+    float: none;
+    margin: 0 auto;
+    width: 80%;
+    padding: 0;
+  }
+  #about img {
+    float: none;
+    margin: 0 auto;
+    max-width: 100%;
+    border-radius: 0;
+  }
+}
+@media screen and (max-width: 533px) {
+   #menu-preview {
+    display: block;
+    padding: 10px 5px;
+   }
+   .menu-item {
+    margin: 20px 20px;
+   }
+}
