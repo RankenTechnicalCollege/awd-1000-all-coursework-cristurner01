@@ -5,7 +5,7 @@ Date: Sept 9, 2025
 */
 
 /* CSS Reset */
-body, header, nav, main, footer, img, h1 {
+body, header, nav, main, footer, img, h1, article, section, figure, figcaption {
   margin: 0;
   padding: 0;
   border: 0;
@@ -34,15 +34,31 @@ body {
 
 img {
     max-width: 100%;
-    height: auto;
-    display: block;
+}
+
+figure {
+    position: relative;
+    max-width: 270px;
+    margin: 2% auto;
+    border: 2px solid;
+    box-shadow: 6px 6px rgb(0, 0, 0);
+}
+
+figcaption {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.363);
+    color: aliceblue;
+    width: 100%;
+    padding: 3% 0;
+    text-align: center;
 }
 
 /* header */
 header {
     border: 3px solid rgb(230, 165, 27);
     text-align: center;
-    padding: 0 8%;
+    padding: 0 0;
     margin: 0 auto;
     background-color: rgba(255, 253, 248, 0.89);
     backdrop-filter: blur(5px);
@@ -107,12 +123,6 @@ main{
     color: brown;
     font-weight: 600;
 }
-#services img{
-    border-radius: 10px;
-    margin: 10px 5px;
-    width: 90%;
-    margin: 10px auto;
-}
 
 #services ul {
     padding: 0;
@@ -171,16 +181,23 @@ footer p {
         display: inline-block;
         width: 40%;
     }
-    .dog1, .dog2 {
-        max-width: 40%;
+    figure {
         display: inline-block;
-        padding: 10px 20px;
-        max-height: 350px;
-        object-fit: cover;
+        margin: 30px 7%;
     }
-    #services img{
-    border-radius: 10px;
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-column-gap: 20px;
     }
+    aside {
+        grid-column: 1 / span 4;
+    }
+    header img {
+        width: 100%;
+        height: 120px;
+    }
+
 }
 /* Desktop media query */
 @media screen and (min-width: 992px), print {
