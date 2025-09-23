@@ -1,0 +1,60 @@
+/*
+Author: Cris Turner
+Date: Sept 22, 2025
+File Name: apply08.css
+*/
+
+/* CSS Reset */
+body, main, footer, table {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Style rule for body */
+body {
+	background-color: #f4f9e1;
+}
+
+/* Style rule for the container */
+#container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+/* Style for the footer element */
+footer {
+	font-size: .70em;
+	text-align: center;
+}
+
+/* Style for table */
+/*canter table and set border*/
+table {
+	width: 80%;
+	margin: 0 auto;
+	border: 3px solid #71881b;
+}
+/* collapse border */
+table, tr, th, td {
+	border-collapse: collapse;
+	padding: 2%;
+}
+/* Caption sizing */
+caption {
+	font-size: 2em;
+	padding: 2%;
+	margin-top: 2%;
+}
+/* table header and date border and border color */
+th, td {
+	border: 1px solid #71881b;
+}
+/* align tb txt to center */
+td {
+	text-align: center;
+}
+/* Set every other row to different color */
+tr:nth-child(odd) {
+	background-color: #d3e788;
+}

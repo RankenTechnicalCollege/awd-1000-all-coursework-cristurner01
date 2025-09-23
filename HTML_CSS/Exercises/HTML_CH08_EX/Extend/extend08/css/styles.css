@@ -1,0 +1,53 @@
+/* Author: Cris Turner
+Date: Sept 22, 2025
+File: styles.css */
+
+
+body {
+    background-color: #ffe5dc;
+}
+
+/* Style for table */
+table {
+    width: 850px;
+    margin: 0 auto;
+    border: 5px solid #fd4d0c;
+    box-shadow: 10px 10px 10px #792101;
+    border-collapse: collapse;
+    font-family: sans-serif;
+}
+
+/* style rule for caption */
+caption {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #792101;
+    padding: 10px;
+}
+
+/* style rules for table head */
+thead td {
+    background-color: #792101;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+    border: 1px solid rgb(184, 139, 139);
+    text-align: center;
+}
+
+/* style rule for table data */
+td {
+    border: 1px solid #a22c02;
+    padding: 15px;
+}
+/* Style for odd table row color */
+tr:nth-child(odd) {
+background-color: #fe9772;
+}
+
+/* Style for footer */
+footer {
+    text-align: center;
+    padding: 40px;
+    font-family: sans-serif;
+}
