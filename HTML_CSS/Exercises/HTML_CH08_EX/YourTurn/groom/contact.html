@@ -52,6 +52,40 @@
         <p>Location:<br><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199412.43681454766!2d-90.40842201917626!3d38.653034484092736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d8b4a9faed8ef9%3A0xbe39eaca22bbe05b!2sSt.%20Louis%2C%20MO!5e0!3m2!1sen!2sus!4v1757343945722!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
       </address>
     </section>
+    <form>
+      <fieldset>
+        <legend>Schedule An Appointment</legend>
+        <p>Who are you?</p>
+        <label for="fName">First Name:</label>
+        <input type="text" name="fName" id="fName">
+
+        <label for="lName">Last Name:</label>
+        <input type="text" name="lName" id="lName">
+
+        <label for="petName">Pet Name:</label>
+        <input type="text" name="petName" id="petName">
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email">
+
+        <label for="phone">Phone:</label>
+        <input type="tel" name="phone" id="phone">
+      </fieldset>
+
+      <fieldset>
+        <legend>What Service Are You Looking For?</legend>
+        <label><input type="checkbox" name="service" id="washdry" value="Wash And Dry">Wash and Dry</label>
+        <label><input type="checkbox" name="service" id="brushdetangle" value="Brush And Detangling">Brush and Detangling</label>
+        <label><input type="checkbox" name="service" id="coattrim" value="Coat Trim">Coat Trim</label>
+        <label><input type="checkbox" name="service" id="earclean" value="Ear Cleaning">Ear Cleaning</label>
+        <label><input type="checkbox" name="service" id="oralhygiene" value="Oral Hygiene">Oral Hygiene</label>
+        <label><input type="checkbox" name="service" id="eyeclean" value="Eye Cleaning">Eye Cleaning</label>
+        
+        <label for="otherinfo">Anything we should know?</label>
+        <textarea name="otherinfo" id="otherinfo" rows="5" cols="25" placeholder="Enter your text here..."></textarea>
+      </fieldset>
+      <button type="submit">Submit</button>
+    </form>
   </main>
 
 
