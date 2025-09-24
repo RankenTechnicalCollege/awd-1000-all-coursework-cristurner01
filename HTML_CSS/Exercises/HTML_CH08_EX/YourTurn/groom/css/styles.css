@@ -1,0 +1,234 @@
+/*
+Author: Cris Turner
+File: styles.css
+Date: Sept 9, 2025
+*/
+
+/* CSS Reset */
+body, header, nav, main, footer, img, h1, article, section, figure, figcaption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Style rules for mobile viewport  */
+
+/* Show mobile class and hide tab-desk class */
+.tab-desk {
+    display:none;
+}
+
+/* body */
+body {
+    background-image: url('../images/doggy.jpg');
+    font-family: Verdana, Arial, sans-serif;
+}
+
+.duhbody {
+    margin: 0 auto;
+    margin-top: 5%;
+    width: 100%;
+}
+
+/* image */
+
+img {
+    max-width: 100%;
+}
+
+figure {
+    position: relative;
+    max-width: 270px;
+    margin: 2% auto;
+    border: 2px solid;
+    box-shadow: 6px 6px rgb(0, 0, 0);
+}
+
+figcaption {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.363);
+    color: aliceblue;
+    width: 100%;
+    padding: 3% 0;
+    text-align: center;
+}
+
+/* header */
+header {
+    border: 3px solid rgb(230, 165, 27);
+    text-align: center;
+    padding: 0 0;
+    margin: 0 auto;
+    background-color: rgba(255, 253, 248, 0.89);
+    backdrop-filter: blur(5px);
+}
+header h1 {
+    color: brown;
+    font-family: "Snowburst One";
+    padding-top: 15px;
+}
+
+header h3 {
+    margin: 0;
+    font-family: "Kirang Haerang";
+    padding-bottom: 10px;
+    color: rgb(50, 78, 100);
+}
+
+/* nav */
+nav {
+    background-color: rgba(255, 253, 248, 0.945);
+    backdrop-filter: blur(5px);
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+}
+nav ul li {
+    padding: 10px 0;;
+    border-top: 2px solid;
+    border-color: rgb(226, 158, 32);
+    display: block;
+    font-family: "Snowburst One";
+    font-weight: 600;
+}
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* main */
+main{
+    clear: both;
+    border: 1px solid rgb(212, 115, 24);
+    text-align: center;
+    margin: 0 auto;
+    background: linear-gradient(to bottom right,rgba(0, 204, 255, 0.473), rgba(238, 233, 233, 0.479) 60%);
+    backdrop-filter: blur(5px);
+}
+
+#info {
+    margin: 0 20px;
+}
+
+.pizazz{
+    font-family: "Snowburst One";
+    font-size: 1.5em;
+    color: brown;
+    font-weight: 600;
+}
+
+#services ul {
+    padding: 0;
+    margin: 0;
+}
+#services li {
+    list-style-type: none;
+}
+
+#contact a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+iframe {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px 0;
+    width: 80%;
+    height: 315px;
+}
+
+/* footer */
+footer {
+    border: 1px solid rgb(204, 169, 12);
+    border-radius: 10px;
+    text-align: center;
+    padding: 3px 0;
+    margin: 5px 20px;
+    background-color: rgba(255, 253, 248, 0.589);
+    backdrop-filter: blur(5px);
+}
+footer p {
+    margin: 2px;
+    list-style-type: none;
+}
+
+/* MEDIA QUERIES */
+/* Tablet media query */
+@media screen and (min-width: 600px), print {
+    .tab-desk {
+        display:block;
+    }
+
+    nav ul li{
+        display: inline-block;
+        border: none;
+        padding: 10px;
+        border-right: 2px solid rgb(255, 195, 65);
+    }
+    nav ul li:last-child {
+        border-right: 0;
+    }
+    
+    .list1, .list2{
+        display: inline-block;
+        width: 40%;
+    }
+    figure {
+        display: inline-block;
+        margin: 30px 7%;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-column-gap: 20px;
+    }
+    aside {
+        grid-column: 1 / span 4;
+    }
+    header img {
+        width: 100%;
+        height: 120px;
+    }
+
+}
+/* Desktop media query */
+@media screen and (min-width: 992px), print {
+    #info p {
+        display:inline-block;
+        max-width: 300px;
+        vertical-align: top;
+    }
+    .duhbody {
+        width: 90%;
+    }
+    nav ul {
+        perspective: 100px;
+    }
+    nav ul li:hover {
+        background-color: rgb(255, 195, 128);
+        transform: translateZ(2px);
+}
+}
+
+/* Large desktop media query */
+@media screen and (min-width: 1700px ), print {
+    .duhbody {
+        width: 80%;
+    }
+}
+
+/* Print media query */
+@media print {
+    body {
+        background-color: white;
+        color: black;
+    }
+}
