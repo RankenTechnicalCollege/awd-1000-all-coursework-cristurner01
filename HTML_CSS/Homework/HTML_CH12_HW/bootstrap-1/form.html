@@ -10,110 +10,173 @@ File: form.html
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   <title>Business Form</title>
 </head>
 
 <body>
-  <section class="">
-    <form id="order-form" action="/order" method="post">
-      <fieldset>
-        <legend>Account Information</legend>
-        <!--First name-->
-        <label for="fName" class="form-label">First Name</label>
-        <input class="form-control" type="text" id="fName" name="fName" required autocomplete="given-name">
 
-        <!--Last name-->
-        <label for="lName" class="form-label">Last Name</label>
-        <input class="form-control" type="text" id="lName" name="lName" required autocomplete="family-name">
+  <div class="container px-3 m-auto">
 
-        <!--Phone Number-->
-        <label for="phone" class="form-label">Phone:</label>
-        <input class="form-control" type="tel" name="phone" id="phone" required autocomplete="tel">
+    <header class="text-center pt-3 m-3">
+      <h1 class="pb-4">Business Form</h1>
+    </header>
+    <main>
+      <section class="row g-4 m-3 border rounded-3 shadow text-start">
+        <h5 class="text-center">Please fill out the form below to complete your order.</h5>
+        <form id="order-form" action="/order" method="post" class="needs-validation p-3" novalidate>
+          <fieldset class="row g-3">
+            <legend>Account Information</legend>
+            <!--First name-->
+            <div class="col-sm-6">
+            <label for="fName" class="form-label">First Name</label>
+            <input class="form-control" type="text" id="fName" name="fName" required autocomplete="given-name">
+            </div>
 
-        <!--Email Address and Confirm-->
-        <label for="email" class="form-label">Email:</label>
-        <input class="form-control" type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" autocomplete="email">
-        <label for="email" class="form-label">Confirm Email:</label>
-        <input class="form-control" type="email" id="confemail" name="confemail" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" autocomplete="email">
+            <!--Last name-->
+            <div class="col-sm-6">
+            <label for="lName" class="form-label">Last Name</label>
+            <input class="form-control" type="text" id="lName" name="lName" required autocomplete="family-name">
+            </div>
 
-        <!--Password and Confirm-->
-        <label for="password" class="form-label">Password</label>
-        <input class="form-control" type="password" name="password" id="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}" autocomplete="current-password">
-        <label for="confpassword" class="form-label">Confirm Password</label>
-        <input class="form-control" type="password" name="confpassword" id="confpassword" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}" autocomplete="current-password">
-      </fieldset>
+            <!--Phone Number-->
+            <div class="col-12">
+            <label for="phone" class="form-label">Phone:</label>
+            <input class="form-control" type="tel" name="phone" id="phone" required autocomplete="tel">
+            </div>
 
-      <fieldset>
-        <legend>Payment Information</legend>
-        <!--Credit Card-->
-        <label for="cNum" class="form-label">Credit Card Number:</label>
-        <input class="form-control" type="text" name="cNum" id="cNum" required inputmode="numeric" autocomplete="cc-number">
+            <!--Email Address and Confirm-->
+            <div class="col-sm-6">
+            <label for="email" class="form-label">Email:</label>
+            <input class="form-control" type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" autocomplete="email">
+            </div>
+            <div class="col-sm-6">
+            <label for="email" class="form-label">Confirm Email:</label>
+            <input class="form-control" type="email" id="confemail" name="confemail" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" autocomplete="email">
+            </div>
 
-        <!--Expiration Date-->
-        <label for="expDate" class="form-label">Expiration Date:</label>
-        <input class="form-control" type="text" name="expDate" id="expDate" required autocomplete="cc-exp">
+            <!--Password and Confirm-->
+            <div class="col-sm-6">
+            <label for="password" class="form-label">Password</label>
+            <input class="form-control" type="password" name="password" id="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}" autocomplete="current-password">
+            </div>
+            <div class="col-sm-6">
+            <label for="confpassword" class="form-label">Confirm Password</label>
+            <input class="form-control" type="password" name="confpassword" id="confpassword" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}" autocomplete="current-password">
+            </div>
+          </fieldset>
 
-        <!--CSC Code-->
-        <label for="csc" class="form-label">CSC Code:</label>
-        <input class="form-control" type="text" name="csc" id="csc" required inputmode="numeric" autocomplete="cc-csc">
-      </fieldset>
+          <hr class="my-4">
 
-      <fieldset>
-        <legend>Billing Address</legend>
-        <!--Address-->
-        <label for="address-line1" class="form-label">Street Address:</label>
-        <input class="form-control" type="text" name="address-line1" id="address-line1" required autocomplete="address-line1">
-        <label for="addressLine2" class="form-label">Address Line 2 (e.g., Apt, Studio, Floor):</label>
-        <input class="form-control" type="text" name="addressLine2" id="addressLine2" autocomplete="address-line2">
+          <fieldset class="row gy-3">
+            <legend>Payment</legend>
+            <!--Credit Card-->
+            <div class="col-md-6">
+            <label for="cNum" class="form-label">Credit Card Number:</label>
+            <input class="form-control" type="text" name="cNum" id="cNum" required inputmode="numeric" autocomplete="cc-number">
+            </div>
 
-        <!--City-->
-        <label for="city" class="form-label">City:</label>
-        <input class="form-control" type="text" name="city" id="city" required autocomplete="address-level2">
+            <!--Expiration Date-->
+            <div class="col-md-3">
+            <label for="expDate" class="form-label">Expiration:</label>
+            <input class="form-control" type="text" name="expDate" id="expDate" required autocomplete="cc-exp">
+            </div>
 
-        <!--State-->
-        <label for="state" class="form-label">State:</label>
-        <select class="form-select" id="state" name="billaddress" required autocomplete="address-level1">
-          <option value="" disabled selected hidden>Please select</option>
-          <option value="MO">MO</option>
-          <option value="IL">IL</option>
-        </select>
+            <!--CSC Code-->
+            <div class="col-md-3">
+            <label for="csc" class="form-label">CSC Code:</label>
+            <input class="form-control" type="text" name="csc" id="csc" required inputmode="numeric" autocomplete="cc-csc">
+            </div>
+          </fieldset>
 
-        <!--Zip Code-->
-        <label for="zip_code" class="form-label">Zip Code:</label>
-        <input class="form-control" type="text" id="zip_code" name="zip_code" pattern="^\d{5}(-\d{4})?$" maxlength="10" required autocomplete="postal-code">
-      </fieldset>
+          <hr class="my-4">
 
-      <fieldset>
-        <legend>Shipping Address</legend>
-        <label for="sameAsBill" class="form-label">Same as billing address?</label>
-        <input class="form-control" type="checkbox" name="ship_info" id="sameAsBill" value="sameAsBill">
+          <fieldset class="row g-3">
+            <legend>Billing Address</legend>
+            <!--Address-->
+            <div class="col-12">
+            <label for="address-line1" class="form-label">Street Address:</label>
+            <input class="form-control" type="text" name="address-line1" id="address-line1" required autocomplete="address-line1">
+            </div>
+            <div class="col-12">
+            <label for="addressLine2" class="form-label">Address Line 2 (e.g., Apt, Studio, Floor):</label>
+            <input class="form-control" type="text" name="addressLine2" id="addressLine2" autocomplete="address-line2">
+            </div>
 
-        <!--Address-->
-        <label for="address-line1_2" class="form-label">Street Address:</label>
-        <input class="form-control" type="text" name="address-line1_2" id="address-line1_2" required autocomplete="address-line1">
-        <label for="addressLine2_2" class="form-label">Address Line 2 (e.g., Apt, Studio, Floor):</label>
-        <input class="form-control" type="text" name="addressLine2_2" id="addressLine2_2" autocomplete="address-line2">
+            <!--City-->
+            <div class="col-md-5">
+            <label for="city" class="form-label">City:</label>
+            <input class="form-control" type="text" name="city" id="city" required autocomplete="address-level2">
+            </div>
 
-        <!--City-->
-        <label for="city_2" class="form-label">City:</label>
-        <input class="form-control" type="text" name="city_2" id="city_2" required autocomplete="address-level2">
+            <!--State-->
+            <div class="col-md-4">
+            <label for="state" class="form-label">State:</label>
+            <select class="form-select" id="state" name="billaddress" required autocomplete="address-level1">
+              <option value="" disabled selected hidden>Please select</option>
+              <option value="MO">MO</option>
+              <option value="IL">IL</option>
+            </select>
+            </div>
 
-        <!--State-->
-        <label for="state_2" class="form-label">State:</label>
-        <select class="form-select" id="state_2" name="billaddress_2" required autocomplete="address-level1">
-          <option value="" disabled selected hidden>Please select</option>
-          <option value="MO">MO</option>
-          <option value="IL">IL</option>
-        </select>
+            <!--Zip Code-->
+            <div class="col-md-3">
+            <label for="zip_code" class="form-label">Zip Code:</label>
+            <input class="form-control" type="text" id="zip_code" name="zip_code" pattern="^\d{5}(-\d{4})?$" maxlength="10" required autocomplete="postal-code">
+            </div>
+          </fieldset>
 
-        <!--Zip Code-->
-        <label for="zip_code_2" class="form-label">Zip Code:</label>
-        <input class="form-control" type="text" id="zip_code_2" name="zip_code_2" pattern="^\d{5}(-\d{4})?$" maxlength="10" required autocomplete="postal-code">
-      </fieldset>
+          <hr class="my-4">
 
-      <button type="submit" class="btn btn-primary">Submit Form</button>
-    </form>
-</section>
+          <fieldset class="row g-3">
+            <legend>Shipping Address</legend>
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="ship_info" id="sameAsBill" value="sameAsBill">
+            <label for="sameAsBill" class="form-check-label">Same as billing address?</label>
+          </div>
+
+            <!--Address-->
+            <div class="col-12">
+            <label for="address-line1_2" class="form-label">Street Address:</label>
+            <input class="form-control" type="text" name="address-line1_2" id="address-line1_2" required autocomplete="address-line1">
+            </div>
+            <div class="col-12">
+            <label for="addressLine2_2" class="form-label">Address Line 2 (e.g., Apt, Studio, Floor):</label>
+            <input class="form-control" type="text" name="addressLine2_2" id="addressLine2_2" autocomplete="address-line2">
+            </div>
+
+            <!--City-->
+            <div class="col-md-5">
+            <label for="city_2" class="form-label">City:</label>
+            <input class="form-control" type="text" name="city_2" id="city_2" required autocomplete="address-level2">
+            </div>
+
+            <!--State-->
+            <div class="col-md-4">
+            <label for="state_2" class="form-label">State:</label>
+            <select class="form-select" id="state_2" name="billaddress_2" required autocomplete="address-level1">
+              <option value="" disabled selected hidden>Please select</option>
+              <option value="MO">MO</option>
+              <option value="IL">IL</option>
+            </select>
+            </div>
+
+            <!--Zip Code-->
+            <div class="col-md-3">
+            <label for="zip_code_2" class="form-label">Zip Code:</label>
+            <input class="form-control" type="text" id="zip_code_2" name="zip_code_2" pattern="^\d{5}(-\d{4})?$" maxlength="10" required autocomplete="postal-code">
+            </div>
+          </fieldset>
+
+          <hr class="my-4">
+
+          <button type="submit" class="btn btn-primary">Submit Form</button>
+        </form>
+      </section>
+    </main>
+    <footer class="text-center border rounded-3 shadow pt-3 m-3">
+      <p>This webpage was created by Cris Turner</p>
+    </footer>
+  </div>
 </body>
 </html>
