@@ -1,0 +1,8 @@
+/* Cris Turner | Oct 6, 2025 | styles.css */
+
+body {
+  background-image: url(../images/Water.png);
+  background-repeat: repeat;
+  background-attachment: fixed;
+  height: 100vh;
+}
