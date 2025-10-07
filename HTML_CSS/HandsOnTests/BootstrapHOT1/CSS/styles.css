@@ -2,34 +2,75 @@
 
 /* Background image for entire page */
 body {
-  background-image: url(../images/Water.jpg);
+  background-image: url(../images/Water2.jpg);
   background-repeat: repeat;
   background-attachment: fixed;
   height: 100vh;
 }
 
 /* HEADER */
-
+header h1 {
+  color: rgb(219, 88, 0);
+  text-shadow: 2px 2px 3px rgb(211, 62, 36);
+}
 
 /* NAV */
 .navbar {
-  background-color: #ffffff;
+  background-image: url(../images/NavBg.png);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.nav-link {
+  color:rgb(216, 79, 0);
+}
+
+.navbar-toggler {
+  border: none !important;
 }
 
 /* MAIN */
+.the-jumbotron{
+  color:rgb(216, 79, 0);
+  text-shadow: 0 2px 3px rgb(6, 97, 6);
+}
+
 .jumbotron-bg {
-  background-image: url(../images/mapbg.png);
-  background-size: 100% 100%;
+  background-image: url(../images/LargeGreenbox.png);
+  background-size: 90% 100%;
   background-position: center;
   background-repeat: no-repeat;
   height: 100%;
 }
 
 .jumbotron-bg p {
-  width: 80%;
+  width: 100%;
   text-align: center;
-  margin-left: 60px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
+
+main img {
+  width: 40%;
+}
+
+.large-green-box {
+  background-image: url(../images/LargeGreenbox.png);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.the-sections {
+  color:rgb(180, 66, 0);
+  text-shadow: 0 1px 2px rgb(2, 88, 48);
+}
+
+  /* products main */
+  .the-cards .col {
+    place-items: center;
+  }
 
 
 /* FOOTER */
