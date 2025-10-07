@@ -1,8 +1,35 @@
 /* Cris Turner | Oct 6, 2025 | styles.css */
 
+/* Background image for entire page */
 body {
-  background-image: url(../images/Water.png);
+  background-image: url(../images/Water.jpg);
   background-repeat: repeat;
   background-attachment: fixed;
   height: 100vh;
 }
+
+/* HEADER */
+
+
+/* NAV */
+.navbar {
+  background-color: #ffffff;
+}
+
+/* MAIN */
+.jumbotron-bg {
+  background-image: url(../images/mapbg.png);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.jumbotron-bg p {
+  width: 80%;
+  text-align: center;
+  margin-left: 60px;
+}
+
+
+/* FOOTER */
