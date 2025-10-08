@@ -68,9 +68,49 @@ main img {
 }
 
   /* products main */
-  .the-cards .col {
-    place-items: center;
-  }
+.products-main {
+  place-items: center;
+}
+
+.red-potion {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin:0 auto;
+}
+
+.the-cards .col {
+  place-items: center;
+}
+
+.card img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin:0 auto;
+  padding-top: 10px;
+}
+
+.products-main .card {
+  background-color: rgb(238, 220, 59);
+  border-radius: 0;
+  border: 10px solid rgb(255, 252, 243);
+  outline: solid 1px rgb(155, 49, 0);
+}
+
+.row-cols-lg-4 {
+  width: 100%;
+}
 
 
 /* FOOTER */
+
+@media screen and (max-width: 1199px) {
+  .products-main .card {
+    width: 100px;
+  }
+  .card img {
+    width: 150px;
+    height: 150px;
+  }
+}
