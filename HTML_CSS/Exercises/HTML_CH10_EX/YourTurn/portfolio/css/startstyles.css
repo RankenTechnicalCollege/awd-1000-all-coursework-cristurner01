@@ -1,0 +1,277 @@
+/* Cris Turner, Sept 20th, 2025. startstyles.css*/
+
+/* RESET */
+body, header, nav, main, footer, img, h1, h2, ul {
+  margin: 0;
+  padding: 0;
+  border:0;
+}
+
+/**/
+body{
+  background-image: url(../images/cool-start-page/body-bg.jpg);
+}
+.start-container {
+display: grid;
+grid-template-columns: .8fr repeat(5, 1fr) .8fr;
+grid-template-rows: .3fr 2fr .3fr;
+grid-column-gap: 0px;
+grid-row-gap: 5px;
+width:100%;
+height:900px;
+}
+/* Fonts Yay! */
+@font-face {
+  font-family: "DK Trashtype";
+  src: url(../fonts/Dktrashtype-RXqo.ttf);
+}
+@font-face {
+  font-family: "Vintage Decore 3";
+  src: url(../fonts/VintageDecorativeSigns3-vqmO.ttf);
+}
+@font-face {
+  font-family: "Freakshow";
+  src: url(../fonts/Freakshow-067d.ttf);
+}
+/* Decore */
+.decore1 {
+  font-family: "Vintage Decore 3";
+  color:antiquewhite;
+  font-size: .7em;
+  width: 50px;
+  text-align: center;
+  writing-mode: vertical-rl;
+  display: inline-block;
+  transform: scaleX(-1);
+  position: relative;
+  top:15px;
+}
+.decore2 {
+  font-family: "Vintage Decore 3";
+  color:antiquewhite;
+  font-size: .7em;
+  width: 50px;
+  text-align: center;
+  writing-mode: vertical-lr;
+  position: relative;
+  top:15px;
+}
+
+/* Header */
+header { 
+  grid-area: 1 / 1 / 2 / 8;
+}
+h1 {
+  text-align: center;
+  margin: 0;
+  color: antiquewhite;
+  font-family: "Freakshow";
+  letter-spacing: 10px;
+  font-weight: 200;
+  font-size: 3.2em;
+  text-shadow: 1px 1px 10px rgba(0, 102, 255, 0.747);
+}
+
+/* main of start grid*/
+.start-grid { 
+  grid-area: 2 / 2 / 3 / 7; 
+  border: 1px solid;
+}
+
+
+.start-grid {
+  display: grid;
+  grid-template-columns: 1fr .5fr 1.1fr 2fr;
+  grid-template-rows: 1.3fr repeat(2, 1fr) .5fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  background-image: url(../images/cool-start-page/chappel-thingy.jpg);
+  background-position: center;
+  background-size: cover;
+  box-shadow: 2px 2px 50px;
+  overflow: hidden;
+  }
+
+  
+/* my name n stuff*/
+
+.start-area { 
+  grid-area: 1 / 1 / 5 / 5; 
+  width: 100%;
+  height:500px;
+}
+section {
+  height: 200px;
+  width: 1000px;
+  margin: 0 auto;
+  transform: rotate(-10deg);
+}
+section h2{
+  position: relative;
+  top: 80px;
+  left: -9%;
+  color:antiquewhite;
+  width:100%;
+  height: 160px;
+  line-height: 140px;
+  font-size: 3.3em;
+  font-family: "DK Trashtype";
+  font-weight: 200;
+  text-align: center;
+  text-shadow: 1px 1px 6px rgba(175, 189, 252, 0.932);
+  background-image: url(../images/cool-start-page/h2\ thingy.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.cool-cris {
+  font-family: "Freakshow";
+  font-size: .9em;
+  letter-spacing: 4px;
+  color:rgb(255, 251, 240);
+  text-shadow: 1px 1px 6px rgba(169, 189, 253, 0.932);
+}
+/**/
+/* NAV */
+.navigation { 
+  grid-area: 2 / 2 / 4 / 4; 
+  display: table;
+}
+nav{
+  transform: rotate(-10deg) scale(1.6);
+  margin: 0 auto;
+  display: table-cell;
+  vertical-align: middle ;
+}
+nav p {
+  color: antiquewhite;
+  font-family: "DK Trashtype";
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 6px rgba(119, 128, 255, 0.932);
+  position: relative;
+  left: 20px;
+  top: 15px;
+}
+nav ul {
+  width: 240px;
+}
+nav ul li {
+  list-style: none;
+  background-image: url(../images/cool-start-page/navlibg.png);
+  background-size: contain;
+  padding: 5px 0;
+  padding-left: 40px;
+  width:200px;
+  margin:5px;
+  font-family: "DK Trashtype";
+}
+nav ul li a{
+  text-decoration: none;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 68, 255, 0.747);
+}
+nav ul li:hover{
+  background-image: url(../images/cool-start-page/navlibghover.png);
+  padding-left: 60px;
+  width: 200px;
+}
+nav li:hover a{
+  color: black;
+  text-shadow: 1px 1px 4px rgb(27, 36, 46);
+}
+
+
+/* Footer */
+footer { 
+  grid-area: 3 / 1 / 4 / 8; 
+  text-align: center;
+}
+footer p {
+  color: antiquewhite;
+  width:90%;
+  margin: 30px auto;
+  padding:10px 0;
+  font-size: 1.2em;
+  text-shadow: 1px 1px 6px rgba(0, 119, 255, 0.747);
+  background-color: rgba(5, 2, 12, 0.384);
+  font-family: "DK Trashtype";
+}
+
+/* Media Queries */
+@media screen and (max-width: 1057px) {
+  .start-grid {
+    grid-area: 2 / 1 / 3 / 8;
+  }
+}
+@media screen and (max-width: 776px) {
+  header {
+    display: table;
+  }
+  h1 {
+    font-size: 2em;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  section h2 {
+    left:-20%;
+    top:50px;
+    font-size: 2.5em;
+  }
+}
+@media screen and (max-width: 581px) {
+  h1{
+    font-size: 1.5em;
+    letter-spacing: 5px;
+  }
+  .decore1, .decore2 {
+    top: 9px;
+  }
+  .decore2 {
+    width: 20px;
+  }
+  .decore1 {
+    width: 30px;
+  }
+  section h2 {
+    font-size:1.8em;
+    left:-25%;
+  }
+  nav {
+    transform: rotate(-10deg) scale(1.3)
+  }
+}
+@media screen and (max-width:463px) {
+  h1 {
+    font-size: 1.4em;
+  }
+  section h2 {
+    left: -30%;
+  }
+  nav ul {
+    position: relative;
+    left: -15%;
+  }
+}
+@media screen and (max-width: 396px) {
+  section h2 {
+    left: -33%;
+    font-size:1.6em ;
+  }
+  footer p {
+    margin: 10px auto;
+    font-size: .8em;
+  }
+  nav ul {
+    position: relative;
+    left: -15%;
+  }
+}
+@media screen and (max-width: 350px) {
+  h1 {
+    font-size: 1.1em;
+  }
+  section h2 {
+    left: -35%;
+    font-size:1.4em;
+  }
+}
