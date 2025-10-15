@@ -2,7 +2,7 @@
 <!--
   Cris Turner
   services.html
-  Sept 8, 2025
+  Oct 15, 2025
 -->
 <html lang="en">
 <head>
@@ -28,7 +28,7 @@
       <h3>&#10077;To ensure the health, cleanliness, and safety of your best friends&#10078;</h3>
   </header>
 
-  <nav>
+  <nav class="tab-desk">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
@@ -37,6 +37,20 @@
         <li><a href="pricing.html">Pricing</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+  </nav>
+
+  <nav class="mobile-nav">
+    <div id="menu-links">
+      <a href="index.html">Home</a>
+      <a href="#">About Us</a>
+      <a href="ourpeople.html">Our People</a>
+      <a href="services.html">Our Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a class="menu-icon" onclick="hamburger()">
+      <div>&#9776;</div>
+    </a>
   </nav>
   </div>
 
@@ -82,5 +96,6 @@
     <p><a href="mailto:contact@bedazzledpaws.net">contact@bedazzledpaws.net</a></p>
   </footer>
   </div>
+  <script src="scripts/script.js"></script>
 </body>
 </html>

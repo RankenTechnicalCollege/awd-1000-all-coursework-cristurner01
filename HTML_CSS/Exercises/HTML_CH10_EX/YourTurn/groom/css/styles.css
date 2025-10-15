@@ -1,7 +1,7 @@
 /*
 Author: Cris Turner
 File: styles.css
-Date: Sept 26, 2025
+Date: Oct 15, 2025
 */
 
 /* CSS Reset */
@@ -107,6 +107,27 @@ nav ul li a {
     color: black;
 }
 
+.mobile-nav #menu-links a {
+  display: block;
+  margin: 8px 0;
+  font-size: 1.3em;
+  color: rgb(155, 36, 0);
+  text-decoration: none;
+  text-align: center;
+}
+
+.mobile-nav a .menu-icon {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.menu-icon div {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
 
 /* main */
 main h2 {
@@ -131,6 +152,31 @@ main{
     font-size: 1.5em;
     color: brown;
     font-weight: 600;
+}
+
+#animhouse {
+    height:300px;
+    width:300px;
+    background-color: antiquewhite;
+    margin: 20px auto;
+}
+
+#animbox {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: myAnimation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes myAnimation {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
 }
 
 #services ul {
@@ -242,6 +288,9 @@ footer p {
     .tab-desk {
         display:block;
     }
+    .mobile-nav{
+        display: none;
+    }
 
     nav ul li{
         display: inline-block;
@@ -300,6 +349,9 @@ footer p {
 }
 /* Desktop media query */
 @media screen and (min-width: 992px), print {
+    .tab-desk {
+        display: block;
+    }
     #info p {
         display:inline-block;
         max-width: 300px;
