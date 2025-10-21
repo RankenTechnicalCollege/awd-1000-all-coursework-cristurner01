@@ -34,46 +34,36 @@ index.html
 
 	<div class="preloader"></div>
 
-	<div class="nav nav-overlay">
-		<div class="nav__content">
-			<div class="container">
-				<div class="row p-4 p-md-0 flex-column-reverse flex-md-row g-md-5 nav__block">
-					<div class="col-md-5">
-						<ul class="nav__list d-none d-md-block">
-							<li class="nav__list-item active-nav"><a href="index.html" class="hover-target">Intro</a>
-							</li>
-							<li class="nav__list-item"><a href="index.html" class="hover-target">Home</a></li>
-							<li class="nav__list-item"><a href="index.html" class="hover-target">Weekly Group Runs</a></li>
-							<li class="nav__list-item"><a href="index.html" class="hover-target">Couch 2 5K Training</a></li>
-						</ul>
-					</div>
-					<div class="col-md-4 text-white">
-						<h3 class="text-white fw-bold nav__block-item">Contact Us</h3>
-						<p class="text-light nav__block-item">brc@bellevillerunningclub.com</p>
-					</div>
-				</div>
-			</div>
+	<!-- Navbar Start -->
+    <div class="container-fluid bg-white sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-2 py-lg-0">
+                <a href="index.html" class="navbar-brand">
+                    <img class="img-fluid" src="images/BRC-logo.png" alt="Logo">
+                </a>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="#home" class="nav-item nav-link active">Home</a>
+                        <a href="#contact" class="nav-item nav-link">Weekly Group Runs</a>
+                        <a href="#services" class="nav-item nav-link">Couch to 5K Training section</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
 
-		</div>
-	</div>
-
-	<div class="main-logo">
-		<a href="index.html">Belleville <span>Running</span> Club</a>
-	</div>
-
-	<div class="side-nav-bar">
-		<input id="menu-toggle" type="checkbox" />
-		<label class="menu-btn" for="menu-toggle">
-			<span></span>
-		</label>
-	</div>
 
 	<section id="intro" class="scrollspy-section">
 		<div class="main-slider">
 			<div class="slider-item jarallax" data-speed="0.2">
 				<img src="images/main-banner1.jpg" alt="banner" class="jarallax-img">
 				<div class="banner-content">
-					<h2 class="banner-title txt-fx">A Club of runners in Belleville, Illinois</h2>
+					<h2 class="banner-title txt-fx" style="color:red">Belleville Running Club:</h2>
+					<h2 class="banner-title txt-fx" style="font-size: 2em;">A Club of runners in Belleville, Illinois</h2>
 				</div><!--banner-content-->
 			</div><!--slider-item-->
 
@@ -123,7 +113,7 @@ index.html
 					<p><strong>We are a club of runners in Belleville, Illinois</strong></p>
 					<p>Running in esier in a club!</p>
 					<div class="btn-wrap">
-						<a href="https://runsignup.com/MemberOrg/BellevilleRunningClub/Register" class="btn btn-accent btn-xlarge btn-rounded">Join or renew your BRC membership</a>
+						<a href="https://runsignup.com/MemberOrg/BellevilleRunningClub/Register" class="btn btn-accent btn-xlarge btn-rounded">Join or renew your<br>BRC membership</a>
 					</div>
 
 					<div class="btn-wrap">
@@ -283,15 +273,9 @@ index.html
 	<div id="footer">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-md-6 mx-auto text-center">
 					<div class="copyright">
 						<p>Copyright © 2025 Belleville Running Club</p>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="copyright text-right">
-						<p>HTML Template by <a href="https://www.templatesjungle.com/"
-								target="_blank">TemplatesJungle</a> distributed By <a href="https://themewagon.com" target="blank">ThemeWagon</a> </p>
 					</div>
 				</div>
 			</div>
