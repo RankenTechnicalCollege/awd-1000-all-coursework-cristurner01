@@ -4,9 +4,18 @@
 
       Fan Trick Fine Art Photography
       Variables and functions
-      Author: 
-      Date:   
+      Author: Cris Turner
+      Date:   Oct 24, 2025
 
       Filename: js02.js
  */
+
+      // set forms default values
+      function setupForm() {
+            document.getElementById("photoNum").value = 1;
+            document.getElementById("photoHrs"). value = 2;
+            document.getElementById("makeBook").checked = false;
+            document.getElementById("photoRights").checked = false;
+            document.getElementById("photoDist").value = 0;
+      }
 
