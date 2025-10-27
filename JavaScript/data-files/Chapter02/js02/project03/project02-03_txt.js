@@ -3,8 +3,19 @@
       Project 02-03
 
       Application to return the shape of a clicked object
-      Author: 
-      Date:   
+      Author: Cris Turner
+      Date:   Oct 26, 2025 
 
       Filename: project02-03.js
  */
+document.getElementById("square").onmouseover = function() {
+      document.getElementById("feedback").innerHTML = ("You're hovering over the square.");
+};
+
+document.getElementById("triangle").onmouseover = function() {
+      document.getElementById("feedback").innerHTML = ("You're hovering over the triangle.");
+};
+
+document.getElementById("circle").onmouseover = function() {
+      document.getElementById("feedback").innerHTML = ("You're hovering over the circle.");
+};
