@@ -3,8 +3,8 @@
       Project 03-04
 
       Application to write a list of customer reviews
-      Author: 
-      Date:   
+      Author: Cris Turner
+      Date:   Oct 29, 2025
 
       Filename: project03-04.js
 */
@@ -21,3 +21,17 @@ let reviews = [
 ];
 let reviewTitles = ["My Favorite Workout Game", "Poor Choreography", "Buggy with Poor Tech Support", "Nice Improvement"];
 
+/* function to generate the HTML tags of several star images based 
+on the value of the rating parameter */
+function starImages(rating) {
+      let imageText = "";
+      for (let i = 1; i <= rating.value; i++) {
+            imageText += "<img src='star.png' alt=''>";
+      }
+      return imageText;
+}
+//generate the HTML code for a table that contains the review from each customer
+for (let i = 0; i < reviewers.length; i++) {
+      let reviewCode = "";
+      if 
+}
