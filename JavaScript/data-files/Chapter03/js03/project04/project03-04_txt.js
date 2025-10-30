@@ -25,13 +25,34 @@ let reviewTitles = ["My Favorite Workout Game", "Poor Choreography", "Buggy with
 on the value of the rating parameter */
 function starImages(rating) {
       let imageText = "";
-      for (let i = 1; i <= rating.value; i++) {
+
+      for (let i = 1; i <= rating; i++) {
             imageText += "<img src='star.png' alt=''>";
       }
+
       return imageText;
 }
-//generate the HTML code for a table that contains the review from each customer
+// generate the HTML code for a table that contains the review from each customer
 for (let i = 0; i < reviewers.length; i++) {
       let reviewCode = "";
-      if 
+
+      /* else if statement that adds one of three possible 
+         text strings to the value of reviewCode */
+      if (reviewType === "P") {
+            reviewCode = "<table class='prime'>";
+      } else if (reviewType === "N") {
+            reviewCode = "<table class='new'>";
+      } else {
+            reviewCode = "<table>";
+      }
+
+      //HTML code for reviewCode
+      reviewCode += "<caption>" + reviewTitles[i] + "</caption>" + 
+                   "<tr><th>By</th><td>" + reviewers[i] + "</td></tr>" +
+                   "<tr><th>Review Date</th><td>" + reviewDates[i] + "</td></tr>" +
+                   "<tr><td colspan='2'>" + reviews[i] + "</td></tr>" +
+                   "</table>";
+
+      // insert the value of reviewCode into the <article> tag directly before the closing tag
+      document.getElementsByTagName("article")[0].insertAdjacentHTML("beforeend", reviewCode);
 }

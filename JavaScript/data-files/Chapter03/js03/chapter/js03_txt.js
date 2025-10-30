@@ -80,7 +80,7 @@ function showGames() {
 
         //Write the information into a table cell
         let tableCell = document.getElementById(gameDates[i]);
-        tableCell.insertAdjacentHTML("beforeEnd", gameInfo)
+        tableCell.insertAdjacentHTML("beforeEnd", gameInfo);
     }
 }
 
