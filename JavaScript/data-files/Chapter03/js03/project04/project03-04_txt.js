@@ -38,9 +38,9 @@ for (let i = 0; i < reviewers.length; i++) {
 
       /* else if statement that adds one of three possible 
          text strings to the value of reviewCode */
-      if (reviewType === "P") {
+      if (reviewType[i] === "P") {
             reviewCode = "<table class='prime'>";
-      } else if (reviewType === "N") {
+      } else if (reviewType[i] === "N") {
             reviewCode = "<table class='new'>";
       } else {
             reviewCode = "<table>";
@@ -50,9 +50,12 @@ for (let i = 0; i < reviewers.length; i++) {
       reviewCode += "<caption>" + reviewTitles[i] + "</caption>" + 
                    "<tr><th>By</th><td>" + reviewers[i] + "</td></tr>" +
                    "<tr><th>Review Date</th><td>" + reviewDates[i] + "</td></tr>" +
+                   "<tr><th>Rating</th><td>" + starImages(stars[i]) + "</td></tr>" +
                    "<tr><td colspan='2'>" + reviews[i] + "</td></tr>" +
                    "</table>";
 
       // insert the value of reviewCode into the <article> tag directly before the closing tag
       document.getElementsByTagName("article")[0].insertAdjacentHTML("beforeend", reviewCode);
+
+
 }

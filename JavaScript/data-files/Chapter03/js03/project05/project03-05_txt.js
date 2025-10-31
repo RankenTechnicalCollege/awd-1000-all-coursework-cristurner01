@@ -22,12 +22,12 @@ let totalSales = 0;
 sales.forEach(addToTotal);
 
 // For loop to generate bar chart of phone sales
-for (let i = 1; i <= phones.length; i++) {
+for (let i = 0; i <= phones.length; i++) {
    
    let barChart = "";   // Variable to store HTML code for table cells used to create bar chart
    
    // Calculate the percent of total sales for a particular phone model
-   let barPercent = 100*sales/totalSales;
+   let barPercent = 100*sales[i]/totalSales;
    
    
    let cellTag;   // Variable that will define the class of td elements used in creating the bar chart cells.
