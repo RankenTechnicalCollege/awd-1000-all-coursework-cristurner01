@@ -1,0 +1,10 @@
+body {
+  text-align: center;
+  background-color: rgb(92, 25, 25);
+}
+
+#board {
+  background-color: black;
+  border-top: 10px solid salmon;
+  border-bottom: 10px solid greenyellow;
+}
