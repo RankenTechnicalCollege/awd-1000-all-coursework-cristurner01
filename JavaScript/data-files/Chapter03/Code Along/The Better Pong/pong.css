@@ -34,7 +34,7 @@ body {
   background: rgb(255, 0, 34);
   position:absolute;
   top: 150px;
-  border-radius: 5px;
+  border-radius: 2px;
 }
 
 .paddle2 {
@@ -88,12 +88,21 @@ body {
 .startText {
   position: absolute;
   margin: 0;
-  top: 50%;
+  top: 60%;
   z-index: 1;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  background: #222;
+  background: #1c0f979f;
+  border-radius: 4px;
+  padding: 10px;
 }
 
-/* i left off at 48:18 */
+.vignette {
+  height: 100dvh;
+  width: 100dvh;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 1) 100%);
+}

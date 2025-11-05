@@ -1,21 +1,23 @@
+"use strict";
+
 /*    JavaScript 7th Edition
       Chapter 4
       Chapter case
 
       Tuba Farm Equipment
       Variables and functions
-      Author: 
-      Date:   
+      Author: Cris Turner
+      Date:   Nov 5, 2025
 
       Filename: js04.js
  */
 
 
 /* global variables tracking status of each form section */
-acresComplete = true;
+let acresComplete = true;
 let cropsComplete = true;
 let monthsComplete = true;
-et fuelComplete = true;
+let fuelComplete = true;
 
 /* global variables referencing sidebar h2 and p elements */
 let messageHeadElement = document.getElementById("messageHead");
@@ -24,8 +26,8 @@ let messageElement = document.getElementById("message");
 /* global variables referencing fieldset elements */
 let acresFieldset = document.getElementsByTagName("fieldset")[0];
 let cropsFieldset = document.getElementsByTagName("fieldset")[1];
-let monthsFieldset  document.getElementsByTagName("fieldset")[2];
-let fuelFieldset = document.getElementsByTagName("fieldset)[3];
+let monthsFieldset = document.getElementsByTagName("fieldset")[2];
+let fuelFieldset = document.getElementsByTagName("fieldset")[3];
 
 /* global variables referencing text input elements */
 let monthsBox = document.forms[0].months;
@@ -67,7 +69,7 @@ function createEventListeners() {
 
 
 /* verify acres text box entry is a positive number */
-function verifyAcres) {
+function verifyAcres() {
    testFormCompleteness();      
 }
 
@@ -95,13 +97,13 @@ function testFormCompleteness() {
 
 /* generate tractor recommendation based on user selections */
 function createRecommendation() {
-   if (acresBox.value >= 5000) { // 5000 acres or less, no crop test needed
-      if (monthsBox.value <= 10) { // 10+ months of farming per year
+   if (acresBox.value <= 5000) { // 5000 acres or less, no crop test needed
+      if (monthsBox.value >= 10) { // 10+ months of farming per year
          messageHeadElement.innerHTML = "E3250";
-         messageElement.innerHTML = E3250Desc;        
+         messageElement.innerHTML = E3250Desc;     
       } else { // 9 or fewer months per year
          messageHeadElement.innerHTML = "E2600";
-         messageElement.innerHTML = E2600Desc;           
+         messageElement.innerHTML = E2600Desc;
       }
    } else { // more than 5000 acres
       if (monthsBox.value <= 9) { // 9 or fewer months per year, no crop test needed
@@ -121,7 +123,7 @@ function createRecommendation() {
    if (document.getElementById("E85").checked) { // add suffix to model name based on fuel choice
       messageHeadElement.innerHTML += "E";
    } else if (document.getElementById("biodiesel").checked) {
-      messageHeadElement.innerHTML = "B";
+      messageHeadElement.innerHTML += "B";
    } else {
       messageHeadElement.innerHTML += "D";  
    }
