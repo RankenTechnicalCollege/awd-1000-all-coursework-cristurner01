@@ -1,10 +1,11 @@
+"use strict";
 /*    JavaScript 7th Edition
       Chapter 4
       Project 04-02
 
       Application to display a random Jane Austen Quote
-      Author: 
-      Date:   
+      Author: Cris Turner
+      Date:  Nov 6, 2025 
 
       Filename: project04-02.js
 */
@@ -33,23 +34,18 @@ window.addEventListener("load", quoteGenerator);
 function quoteGenerator() {
    
    // Number of quotes in the array
-   quoteCount = quotes.length;
+   let quoteCount = quotes.length;
    
    // Generate a random integer to select a quote
-   randomQuote = randomInt(0, quoteCount);
+   let randomQuote = randomInt(0, quoteCount - 1);
    
    // Retrieve a randomly-selected quote
-   quote = quotes[randomQuotes];
+   let quote = quotes[randomQuote];
    
    
    // Display the random quote
-   document.getElementByTagName("blockquote")[1].innerHTML = quote;
+   document.getElementById("blockquote").innerHTML = quote;
 }
-
-
-
-
-
 
 
 
