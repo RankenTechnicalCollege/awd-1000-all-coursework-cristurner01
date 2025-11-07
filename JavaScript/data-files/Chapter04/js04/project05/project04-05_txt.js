@@ -1,3 +1,4 @@
+"use strict";
 /*    JavaScript 7th Edition
       Chapter 4
       Project 04-05
@@ -21,15 +22,17 @@ function radiansToDegrees(radians) {
 }
 
 // Event handler that converts radians to degrees when the input box is changed
-document.getElementById("rValue").onchange = function( {
+document.getElementById("rValue").onchange = function() {
    let radians = document.getElementById("rValue").value;
-   document.getElementById("aValue").value = formatValue3(radiansToDegrees(radian));
+   console.log("Radians = radians");
+   document.getElementById("aValue").value = formatValue3(radiansToDegrees(radians));
 }
 
 // Event handler that converts degrees to radians when the input box is changed
 document.getElementById("aValue").onchange = function() {
    let degrees = document.getElementById("aValue").value;
-   document.getElementById("rValue").value = formatValue3(degreesToRadians(degrees);
+   console.log("Degrees = degrees");
+   document.getElementById("rValue").value = formatValue3(degreesToRadians(degrees));
 }
 
 
