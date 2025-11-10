@@ -4,8 +4,8 @@
       Chapter Case
 
       Application to generate a slide show
-      Author: 
-      Date:   
+      Author: Cris Turner
+      Date:   Nov 10, 2025 
 
       Filename: js05.js
 */
