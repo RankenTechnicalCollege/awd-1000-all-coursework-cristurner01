@@ -23,6 +23,11 @@ for (let n = sourceDoc.firstElementChild; n != null; n = n.nextElementSibling) {
             n.insertBefore(anchor, n.firstChild);
             let listItem = document.createElement("li");
             let link = document.createElement("a");
+            listItem.appendChild(link);
+            link.textContent = n.textContent;
+            listItem.href = "#doclink" + headingCount;
+            toc.appendChild(listItem);
+            headingCount++;
       }
 }
 
