@@ -4,28 +4,26 @@
       Chapter case
 
       Order Form Code
-      Author: 
-      Date:   
+      Author: Cris Turner
+      Date:   Nov 17, 2025
 
       Filename: js06b.js
  */
 
+let subButton = document.getElementById("subButton");
 
+// Validate the payment when the submit button is clicked
+subButton. addEventListener("click", validateName);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//check if the owners name is entered on the cardfunction
+function validateName() {
+   let cardName = document.getElementById("cardName");
+   if (cardName.validity.valueMissing) {
+      cardName.setCustomValidity("Enter your name as it appears on the card");
+   } else {
+      cardName.setCustomValidity("");
+   }
+}
 
 
 /* ------- Luhn Algorithm used for Validating Credit Card Numbers   ----- */
