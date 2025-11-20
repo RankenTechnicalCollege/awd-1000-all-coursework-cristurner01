@@ -1,0 +1,59 @@
+body{
+  background-color: rgb(153, 38, 44);
+}
+
+#container {
+  margin: 0 auto;
+  padding-top: 10%;
+  width: 400px;
+  text-align: center;
+}
+
+h1 {
+  color:antiquewhite;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+input {
+  background-color: rgb(112, 20, 25);
+  border:solid 1px rgb(255, 166, 0);
+  border-radius: 15px;
+  padding: 5px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button {
+  background-color: rgb(124, 5, 5);
+  color:rgb(255, 255, 255);
+  border: none;
+  border-radius: 10px;
+  padding:5px 10px 5px;
+}
+
+#theBigFatList {
+  background-color: rgb(94, 6, 13);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 15px;
+  height: 500px;
+  overflow-y: scroll;
+  
+}
+
+li {
+  background-color: rgb(196, 84, 19);
+  border-radius: 15px;
+  border:solid 2px rgb(255, 156, 27);
+  padding: 6px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color:rgb(255, 196, 0);
+}
+
+::-webkit-scrollbar {
+width:0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: antiquewhite;
+}
+

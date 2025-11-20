@@ -4,39 +4,26 @@
       Chapter case   
 
       Word Cloud   Generator
-      Author: 
-      Date:       
+      Author: Cris Turner
+      Date:   Nov 20, 2025
 
       Filename:       js07.js
  */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+document.getElementById("getFile").onchange = function() {
+      //retrieve information about the selected file
+      let userFile = this.files[0];
+      //Read the contents of the selected file
+      let fr = new FileReader();
+      fr.readAsText(userFile);
+      //once the file has finished loading, display in the page
+      let sourceDoc = document.getElementById("wc_document");
+      fr.onload=function() {
+            sourceDoc.innerHTML = fr.result;
+            // Store the text of the document, remove HTML tags 
+            let sourceText = sourceDoc.textContent;
+      }
+};
 
 
 /*--- ----------------------------------------------*/
