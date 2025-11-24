@@ -13,15 +13,39 @@
 document.getElementById("getFile").onchange = function() {
       //retrieve information about the selected file
       let userFile = this.files[0];
-      //Read the contents of the selected file
-      let fr = new FileReader();
-      fr.readAsText(userFile);
-      //once the file has finished loading, display in the page
-      let sourceDoc = document.getElementById("wc_document");
-      fr.onload=function() {
-            sourceDoc.innerHTML = fr.result;
-            // Store the text of the document, remove HTML tags 
-            let sourceText = sourceDoc.textContent;
+      //Verify that a text file is selected
+      try {
+            let isText = userFile.type.startsWith("text");
+            if (!isText) {
+                  throw userFile.name + " is not a text file";
+            }
+     
+            //Read the contents of the selected file
+            let fr = new FileReader();
+            fr.readAsText(userFile);
+
+            //once the file has finished loading, display in the page
+            let sourceDoc = document.getElementById("wc_document");
+            fr.onload = function() {
+                  sourceDoc.innerHTML = fr.result;
+
+                  // Store the text of the document, remove HTML tags 
+                  let sourceText = sourceDoc.textContent;
+
+                  //Generate the word cloud
+                  wordCloud(sourceText);
+            }
+      } catch(err) {
+            window.alert(err);
+      }
+
+      function wordCloud(sourceText){
+            // Convert the source text to lowercase
+            // and remove leading and trailing whitespace
+            sourceText = sourceText.toLowerCase();
+            sourceText = sourceText.trim();
+
+            console.log(sourceText);
       }
 };
 
