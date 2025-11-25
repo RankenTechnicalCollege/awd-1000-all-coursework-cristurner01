@@ -4,8 +4,8 @@
       Project 07-03
 
       Project to create a New Year's Eve countdown clock
-      Author: 
-      Date:   
+      Author: Cris Turner
+      Date:   Nov 25, 2025
 
       Filename: project07-03.js
 */

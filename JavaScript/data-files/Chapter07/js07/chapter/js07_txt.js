@@ -82,6 +82,25 @@ document.getElementById("getFile").onchange = function() {
             function byDuplicate(a, b) {
                   return b [1]-a[1];
             }
+            // Keep the top 100 words
+            unique = unique.slice(0, 100);
+
+            // Find the duplicates of the most repeated word
+            let maxCount = unique[0][1];
+            //sort the word list in alphabetical order
+            unique.sort();
+            
+            // Reference the word cloud box
+            let CloudBox = document.getElementById("wc_cloud");
+            CloudBox.innerHTML = "";
+
+            // Size each word based on its usage
+            for (let i = 0; i < unique.length; i++) {
+                  let word = document.createElement("span");
+                  word.textContent = unique[i][0];
+                  word.style.fontSize = unique[i][1]/maxCount + "em";
+                  CloudBox.appendChild(word);
+            }
       }
 };
 
