@@ -4,8 +4,8 @@
       Project 07-05
 
       Project to compare the distribution of word lengths between two authors
-      Author: 
-      Date:   
+      Author: Cris Turner
+      Date:   Nov 26, 2025
 
       Filename: project07-05.js
 */
@@ -13,7 +13,7 @@
 // Onchange event handler to load an external file for author 1
 document.getElementById("button1").onchange = function() {
    // Retrieve the selected file for author 1
-   let file = this.file[0];
+   let file = this.files[0];
    let doc = document.getElementById("document1");
    let count = document.getElementById("count1");
    
@@ -24,7 +24,7 @@ document.getElementById("button1").onchange = function() {
 // Onchange event handler to load an external file for author 2
 document.getElementById("button2").onchange = function() {
    // Retrieve the selected file for author 2
-   let file = this.file[0];
+   let file = this.files[0];
    let doc = document.getElementById("document2");
    let count = document.getElementById("count2");
    
