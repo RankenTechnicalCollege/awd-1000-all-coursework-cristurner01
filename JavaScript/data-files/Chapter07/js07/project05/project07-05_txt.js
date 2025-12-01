@@ -38,22 +38,22 @@ document.getElementById("button2").onchange = function() {
 
 function generateWordFreq(inputFile, outputDoc, outputCount) {
    // Read the contents of the selected file
-   let fr = new Reader();
-   fr.read(inputFile); 
+   let fr = new FileReader();
+   fr.readAsText(inputFile); 
 
    // Once the file has finished loading, display the document in the page
-   fr.onload=function() { 
+   fr.onload = function() { 
       outputDoc.innerHTML = fr.result;
       
       // Store the text content of the output document
       let sourceText = outputDoc.innerHTML;
       
       // Remove any character that is not alphabetic or whitespace
-      let alphaRegx = "/[^a-zA-Z\s]/g";
+      let alphaRegx = /[^a-zA-Z\s]/g;
       sourceText = sourceText.replace(alphaRegx, "");  
 
       // Split the text into an array at each occurence of one or more whitespace characters
-      let words = sourceText.split(/\s+/); 
+      let words = sourceText.split(/\s+/g); 
 
       // Initial frequency array for words of 1 to 15 characters in length
       // Setting their initial counts to 0.
@@ -65,7 +65,7 @@ function generateWordFreq(inputFile, outputDoc, outputCount) {
          // If a word has 15 or more characters, add it to the count
          // of words in the array with index 15
          if (words[i].length >= 15) {
-            freqs[15]++;
+            freqs[[15]]++;
          } else {
             // Add to the count of words of length i by increasing
             // the value of the ith entry in the freqs array
