@@ -25,6 +25,11 @@ let pokerGame = {
 function pokerCard(cardSuit, cardRank) {
    this.suit = cardSuit;
    this.rank = cardRank;
+};
+
+// Method to reference the image of the poker card
+pokerCard.prototype.cardImage = function() {
+   return this.rank + "_" + this.suit + ".png";
 }
 
 /* Constructor function for poker decks */
@@ -41,8 +46,35 @@ function pokerDeck() {
          this.cards.push(new pokerCard(suits[i], ranks[j]));
       }
    }
-};
-   
+
+   //Method to randomly sort the cards in the deck
+   this.shuffle = function(){
+      this.cards.sort(function() {
+         return 0.5 - Math.random();
+      });
+   };
+
+   // Method to deal cards from the deck into a hand
+   this.dealTo = function(pokerHand) {
+      let cardsDealt = pokerHand.cards.length;
+      pokerHand.cards = this.cards.splice(0, cardsDealt);
+   }
+}; 
+
+//Constructor function for poker hands
+function pokerHand(handLength) {
+   this.cards = new Array(handLength);
+}
+
+// Method to replace a card in a hand with a card from a deck
+pokerHand.prototype.replaceCard = function(index, pokerDeck) {
+   this.cards[index] = pokerDeck.cards.shift();
+}
+
+// Method to determine the value of the pokerHand
+pokerHand.prototype.getHandValue = function() {
+   return handType(this);
+
    /* ------------------------------------------------+
    | The handType() function returns a text string of |
    | the type of hand held by 5-card poker hand.      |
@@ -156,7 +188,9 @@ function pokerDeck() {
    /* ------------------------------------------------+
    |             End of the  handType() function      |
    +-------------------------------------------------*/   
- 
+}
+   
+   
  
  
  
