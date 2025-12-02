@@ -46,7 +46,7 @@ function generateWordFreq(inputFile, outputDoc, outputCount) {
       outputDoc.innerHTML = fr.result;
       
       // Store the text content of the output document
-      let sourceText = outputDoc.innerHTML;
+      let sourceText = outputDoc.textContent;
       
       // Remove any character that is not alphabetic or whitespace
       let alphaRegx = /[^a-zA-Z\s]/g;
@@ -60,12 +60,12 @@ function generateWordFreq(inputFile, outputDoc, outputCount) {
       let freqs = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
       // Loop through every word in the words array
-      for (let i = 0; i <= words.length; i++) {
+      for (let i = 0; i < words.length; i++) {
          
          // If a word has 15 or more characters, add it to the count
          // of words in the array with index 15
          if (words[i].length >= 15) {
-            freqs[[15]]++;
+            freqs[15]++;
          } else {
             // Add to the count of words of length i by increasing
             // the value of the ith entry in the freqs array
@@ -82,7 +82,7 @@ function generateWordFreq(inputFile, outputDoc, outputCount) {
       for (let i = 1; i <= 15; i++) {
          // Calculate the percent of words of each length
          // Display the frequency to 1 decimal place
-         let percent = (totalWords/freqs[i]*100).toFixed(1)+"%"
+         let percent = (freqs[i] / totalWords * 100).toFixed(1)+"%"
          outputPara[i - 1].textContent = percent;
       }      
       
