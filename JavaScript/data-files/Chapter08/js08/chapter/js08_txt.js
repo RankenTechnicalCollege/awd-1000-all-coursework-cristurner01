@@ -103,6 +103,11 @@ function playDrawPoker() {
          }
       }
 
+      // Evaluate the hand drawn by user
+      statusBox.textContent = myHand.getHandValue();
+
+      // Update the bank value
+      bankBox.value = pokerGame.payBet(statusBox.textContent);
    });
    
     
@@ -113,7 +118,10 @@ function playDrawPoker() {
       drawButton.disabled = true;         // Turn off the Draw button
       standButton.disabled = true;        // Turn off the Stand Button  
 
-    
+      // Evaluate the hand drawn by user
+      statusBox.textContent = myHand.getHandValue();
+      bankBox.value = pokerGame.payBet(statusBox.textContent);
+
    });
    
    
