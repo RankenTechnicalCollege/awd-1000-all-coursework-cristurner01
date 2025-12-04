@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 20px;
+    }
+
+    #output {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      background-color: #f7f7f7;
+      width: 300px;
+    }
+  </style>
+  
+</head>
+<body>
+  <h1>User-created objects demo</h1>
+  <label>Brand:
+    <input type="text" id="brandInput">
+  </label>
+  <br><br>
+  <label>Model:
+    <input type="text" id="modelInput">
+  </label>
+  <br><br>
+
+  <button id="createCarBtn">Create Car</button>
+  <h2>Car Controls</h2>
+  <button id="accBtn" disabled>Accelerate</button>
+  <button id="breakBtn" disabled>Break</button>
+
+  <div id="output">No car created yet.</div>
+<script src="app.js" defer></script>
+</body>
+</html>

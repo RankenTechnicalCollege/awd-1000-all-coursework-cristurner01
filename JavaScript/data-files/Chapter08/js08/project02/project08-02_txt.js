@@ -4,8 +4,8 @@
       Project 08-02
 
       Project to add balls bouncing within a container
-      Author: 
-      Date:   
+      Author: Cris Turner
+      Date:   Dec 4, 2025
 
       Filename: project08-02.js
 */
