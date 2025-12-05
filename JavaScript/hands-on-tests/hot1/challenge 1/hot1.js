@@ -2,30 +2,22 @@
 Author: Cris Turner
 file: hot1.js
 Date: Oct 31, 2025
-
-god help me
 */
 
-let favMovies = ["The Hobbit", "How To Train Your Dragon", "Pirates of the Caribbean"];
+let favoriteMovies = ["The Polar Express", "Elf", "The Grinch"];
 
-document.getElementById("yourFavoriteMovie").addEventListener("click", addInputToArray);
+let userInput = document.getElementById("yourfavmovie");
+let submit = document.getElementById("button");
+let message = document.getElementById("message");
 
-function addInputToArray(yourFavMovie, favMovies) {
-  let yourFavMovie = document.getElementById("yourfavmovie");
-  let inputValue = yourFavMovie.value;
-  if (inputValue !== ''){
-    favMovies.push(inputValue);
-    return favMovies;
-  //????? idk
+submit.onclick = function() {
+  yourMovie = userInput.value;
+  favoriteMovies.push(yourMovie);
+    message.innerHTML = "";
+
+  for (let i = 0; i < favoriteMovies.length; i++) {
+    message.innerHTML = "<p>My favorite christmas movie is " + favoriteMovies[0] +
+    ", " + favoriteMovies[1] + ", and " + favoriteMovies[2]+ ". Your favorite movie is " +
+    favoriteMovies[3] + ".</p>";
   }
-}
-
-for (let i = 0; i < favMovies.length; i++) {
-  let favMoviesCode = "";
-
-  favMoviesCode += "<p>My Favorite movies are " + favMovies[0] +
-                   ", " + favMovies[1] + ",  " + favMovies[2] + ", "
-                   + favMovies[3] + "</P>";
-
-  document.getElementsByTagName("section")[1].insertAdjacentHTML("beforeend", favMoviesCode);           
 }
