@@ -1,0 +1,30 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: aqua;
+  margin: 40px;
+}
+
+/* header */
+h1{
+  color: blue;
+}
+
+h2{
+  color :rgb(113, 32, 167);
+}
+
+img{ 
+  border-radius: 20px;
+}
+/*style for links*/
+a {
+  color: rgb(179, 7, 7);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+
