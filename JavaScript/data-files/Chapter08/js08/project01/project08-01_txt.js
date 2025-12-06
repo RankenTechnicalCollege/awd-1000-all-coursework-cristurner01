@@ -14,13 +14,15 @@
 
 /*--------------- Object Code --------------------*/
 function timer(min, sec) {
-      this.timer.minutes = min;
-      this.timer.seconds = sec;
-      this.timer.timeID = null;
+      this.minutes = min; //changed these to this.minutes/seconds ect. the i
+      this.seconds = sec; //idk if that did anything. what the book had was not working, its confusing me
+      this.timeID = null;
 };
 
-timer.prototype.runPause(timer, minBox, secBox) = function() {
-      if (timer.timeID === "") {
+
+
+timer.prototype.runPause = function(timer, minBox, secBox) {
+      if (timer.timeID !== null) { //i changed "" to null so the pause works
             window.clearInterval(timer.timeID);
             timer.timeID = null;
       } else {
@@ -32,6 +34,7 @@ timer.prototype.runPause(timer, minBox, secBox) = function() {
                   timer.seconds--;
             } else if (timer.minutes > 0) {
                   timer.seconds = 59;
+                  timer.minutes--; // added -- so to the minutes decrease after seconds reached 59
             } else {
                   window.clearInterval(timer.timeID);
                   timer.timeID = null;
