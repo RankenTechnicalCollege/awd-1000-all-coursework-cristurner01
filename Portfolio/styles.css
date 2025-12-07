@@ -1,0 +1,161 @@
+*  {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #e7e4e4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+@font-face {
+    font-family: 'Second Causes';
+    src: url(fonts/SecondCausesDemoBold-vn2JE.otf);
+}
+@font-face {
+    font-family: 'Brskovo';
+    src: url(fonts/BrskovoDemoExtrablack-BWgzB.ttf);
+}
+
+/* Mobile Styles */
+.linkspage1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .1fr 1.5fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-color: #fcf4ee;
+    text-align: center;
+    height: 380px;
+    margin: 10px 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+.logo {
+    grid-area: 1 / 1 / 2 / 2;
+    display: grid;
+    border-bottom: 1px solid #000000;
+    height:40px;
+    padding-left: 20px;
+}
+
+.logo p {
+    font-family: 'Second Causes';
+    text-align: left;
+    line-height: 40px;
+    font-size: 1.1em;
+}
+
+.mypicture {
+    grid-area: 2 / 1 / 3 / 2;
+    transform: scale(.7);
+    height: 300px;
+}
+
+
+
+nav {
+    position: relative;
+    left:-8px;
+    height: 150px;
+    transform: scale(.9);
+    top: -10px;
+    
+}
+
+nav a {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform-origin: bottom center;
+    width: 80px;
+    height:80px;
+    padding: 10px;
+    margin: 0 -40px;
+    color: rgb(196, 125, 19);
+    text-decoration: none;
+    background-color: #994d059f;
+    border-radius: 100px;
+}
+
+nav a p {
+    display: none;
+}
+
+nav a svg {
+    position: relative;
+    top:10px;
+    height:50px;
+    width:100%;
+    fill: rgb(0, 0, 0);
+}
+
+nav a:hover {
+    background: rgba(211, 180, 124, 0.801);
+    color: rgb(0, 0, 0);
+    display: block;
+}
+
+nav a:hover p {
+    display: block;
+    font-size: 15px;
+    position: relative;
+    top: -10px;
+}
+
+nav a:nth-child(1) { 
+    transform: rotate(-80deg) translateY(-190px) rotate(80deg);
+}
+nav a:nth-child(2) { 
+    transform: rotate(-35deg) translateY(-110px) rotate(35deg); 
+}
+nav a:nth-child(3) { 
+    transform: rotate(35deg)  translateY(-110px) rotate(-35deg); 
+}
+nav a:nth-child(4) { 
+    transform: rotate(80deg)  translateY(-190px) rotate(-80deg); 
+}
+
+.nav-frame {
+    position: relative;
+    transform: scale(2.4);
+    top: -40px;
+}
+
+.its-me {
+    position: relative;
+    margin: 0 auto;
+    top: -70px;
+    width: 250px;
+}
+
+.its-me img {
+    border: 2px solid #d68d2c;
+    border-radius: 100px;
+    width: 200px;
+}
+
+.its-me p {
+    color: rgb(148, 58, 5);
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: 'Second Causes';
+}
+
+.its-me a{
+    text-decoration: none;
+    color: rgb(143, 16, 7);
+    border: 1px solid rgb(0, 0, 0);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.its-me a:hover  {
+    background-color: #9398a8;
+}
+
+
+/* Mobile Styles END */
