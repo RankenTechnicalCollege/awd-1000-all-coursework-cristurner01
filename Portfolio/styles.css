@@ -4,7 +4,8 @@
 }
 
 body {
-    background-color: #e7e4e4;
+    background-image: url(images/bg.jpg);
+    background-size: contain;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(0, 0, 0);
 }
@@ -21,6 +22,7 @@ body {
 h2 {
     font-family: 'Second Causes';
     font-size: 20px;
+    color: antiquewhite;
 }
 
 /* Mobile Styles */
@@ -31,14 +33,14 @@ h2 {
     grid-template-rows: .1fr 1.5fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    background-color: #fcf4ee;
+    background-color: #0d0e13bb;
     text-align: center;
     height: 380px;
     margin:0 10px;
     margin-top: 10px;
     border: 1px solid #000000;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 .logo {
@@ -49,14 +51,18 @@ h2 {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     border-bottom: 1px solid #000000;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     height:40px;
     padding-left: 20px;
     padding-right: 20px;
+    background-color: #0e0d0c;
 }
 
 .logo p {
     font-family: 'Second Causes';
     text-align: left;
+    color: antiquewhite;
     line-height: 40px;
     font-size: 1.1em;
     grid-area: 1 / 1 / 2 / 2;
@@ -66,6 +72,8 @@ h2 {
     grid-area: 1 / 2 / 2 / 3; 
     text-align: right;
     line-height: 40px;
+    color:antiquewhite;
+    text-decoration: none;
 }
 
 .mypicture {
@@ -94,7 +102,7 @@ nav a {
     margin: 0 -40px;
     color: rgb(196, 125, 19);
     text-decoration: none;
-    background-color: #994d059f;
+    background-color: rgba(64, 67, 73, 0.116);
     border-radius: 100px;
 }
 
@@ -107,12 +115,12 @@ nav a svg {
     top:10px;
     height:50px;
     width:100%;
-    fill: rgb(0, 0, 0);
+    fill: rgb(124, 158, 231);
 }
 
 nav a:hover {
-    background: rgba(211, 180, 124, 0.801);
-    color: rgb(0, 0, 0);
+    background: #272b3f9f;
+    color: rgb(236, 230, 226);
     display: block;
 }
 
@@ -140,6 +148,7 @@ nav a:nth-child(4) {
     position: relative;
     transform: scale(2.4);
     top: -40px;
+    fill: rgba(103, 109, 139, 0.568);
 }
 
 .its-me {
@@ -150,13 +159,13 @@ nav a:nth-child(4) {
 }
 
 .its-me img {
-    border: 2px solid #d68d2c;
+    border: 2px solid #395ab4;
     border-radius: 100px;
     width: 200px;
 }
 
 .its-me p {
-    color: rgb(148, 58, 5);
+    color: rgb(88, 145, 230);
     font-size: 18px;
     margin-top: 10px;
     margin-bottom: 20px;
@@ -180,19 +189,21 @@ nav a:nth-child(4) {
 #aboutme {
     margin: 0 10px;
     padding: 10px;
+    background-color: #0d0e13bb;
     border: 1px solid #000000;
     border-top: none;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    background-color: #fcf4ee;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 
 
 #aboutme #intro p {
-    font-family:'Times New Roman', Times, serif;
+    font-family:'Geneva', Verdana, sans-serif;
     padding: 0 5px;
     padding-top: 10px;
+    color: antiquewhite;
+    font-size: 20px;
 }
 
     /* ABOUT ME END */
@@ -205,7 +216,8 @@ nav a:nth-child(4) {
     border-top: none;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    background-color: #fcf4ee;
+    background-color: #0d0e13bb;
+
 }
 
     /* CONTACT END */
@@ -218,7 +230,8 @@ nav a:nth-child(4) {
     border-top: none;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    background-color: #fcf4ee;
+    background-color: #0d0e13bb;
+
 }
 
     /* COURSEWORK END */
@@ -231,7 +244,8 @@ nav a:nth-child(4) {
     border-top: none;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    background-color: #fcf4ee;
+    background-color: #0d0e13bb;
+
 }
     /* PORTFOLIO END */
 
