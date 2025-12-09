@@ -39,6 +39,7 @@ h2 {
     margin:0 10px;
     margin-top: 10px;
     border: 1px solid #000000;
+    border-bottom: none;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 }
@@ -174,20 +175,24 @@ nav a:nth-child(4) {
 
 .its-me a{
     text-decoration: none;
-    color: rgb(143, 16, 7);
+    color: rgb(37, 120, 245);
     border: 1px solid rgb(0, 0, 0);
     padding: 5px 10px;
+    background-color: #38356d63;
     border-radius: 5px;
 }
 
 .its-me a:hover  {
-    background-color: #9398a8;
+    background-color: #20357ab0;
+    color: rgb(122, 170, 241);
+    font-weight: bold;
 }
     /* MAIN PAGE END */
 
     /* ABOUT ME START*/
 #aboutme {
     margin: 0 10px;
+    margin-bottom: 10px;
     padding: 10px;
     background-color: #0d0e13bb;
     border: 1px solid #000000;
@@ -196,13 +201,19 @@ nav a:nth-child(4) {
     border-bottom-right-radius: 10px;
 }
 
-
+#aboutme #intro {
+    margin: 10px;
+    padding: 10px;
+    background-color: #3b352d79;
+    border-radius: 15px;
+    border: 1px solid rgb(40, 94, 194);
+}
 
 #aboutme #intro p {
     font-family:'Geneva', Verdana, sans-serif;
     padding: 0 5px;
     padding-top: 10px;
-    color: antiquewhite;
+    color: rgb(212, 201, 187);
     font-size: 20px;
 }
 
