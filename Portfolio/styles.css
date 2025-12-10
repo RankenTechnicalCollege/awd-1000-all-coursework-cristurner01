@@ -40,8 +40,8 @@ h2 {
     margin-top: 10px;
     border: 1px solid #000000;
     border-bottom: none;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
 }
 
 .logo {
@@ -52,8 +52,8 @@ h2 {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     border-bottom: 1px solid #000000;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     height:40px;
     padding-left: 20px;
     padding-right: 20px;
@@ -163,6 +163,7 @@ nav a:nth-child(4) {
     border: 2px solid #395ab4;
     border-radius: 100px;
     width: 200px;
+    box-shadow: 0 0 20px #000000;
 }
 
 .its-me p {
@@ -189,75 +190,43 @@ nav a:nth-child(4) {
 }
     /* MAIN PAGE END */
 
-    /* ABOUT ME START*/
-#aboutme {
+    /* The Content Boxes */
+.content-section {
     margin: 0 10px;
     margin-bottom: 10px;
     padding: 10px;
     background-color: #0d0e13bb;
     border: 1px solid #000000;
-    border-top: none;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top: 1px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
-#aboutme #intro {
+.content {
     margin: 10px;
     padding: 10px;
-    background-color: #3b352d79;
+    background-color: #23262c79;
     border-radius: 15px;
-    border: 1px solid rgb(40, 94, 194);
+    box-shadow: 0 0 20px #000000;
 }
 
-#aboutme #intro p {
+.content p {
     font-family:'Geneva', Verdana, sans-serif;
     padding: 0 5px;
     padding-top: 10px;
     color: rgb(212, 201, 187);
     font-size: 20px;
 }
-
+    /* ABOUT ME START*/
     /* ABOUT ME END */
 
     /* CONTACT START */
-#contact {
-    margin: 0 10px;
-    padding: 10px;
-    border: 1px solid #000000;
-    border-top: none;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    background-color: #0d0e13bb;
-
-}
-
     /* CONTACT END */
 
     /* COURSEWORK START */
-#coursework {
-    margin: 0 10px;
-    padding: 10px;
-    border: 1px solid #000000;
-    border-top: none;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    background-color: #0d0e13bb;
-
-}
-
     /* COURSEWORK END */
 
     /* PORTFOLIO START */
-#portfolio {
-    margin: 0 10px;
-    padding: 10px;
-    border: 1px solid #000000;
-    border-top: none;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    background-color: #0d0e13bb;
-
-}
     /* PORTFOLIO END */
 
 /* Mobile Styles END */
