@@ -204,6 +204,7 @@ nav a:nth-child(4) {
 
 .content {
     margin: 10px;
+    max-height: 580px;
     padding: 10px;
     background-color: #23262c79;
     border-radius: 15px;
@@ -211,7 +212,7 @@ nav a:nth-child(4) {
 }
 
 .content p {
-    font-family:'Geneva', Verdana, sans-serif;
+    font-family: monospace, Verdana, sans-serif;
     padding: 0 5px;
     padding-top: 10px;
     color: rgb(212, 201, 187);
@@ -224,6 +225,73 @@ nav a:nth-child(4) {
     /* CONTACT END */
 
     /* COURSEWORK START */
+.cw-container {
+    display: grid;
+    grid-template-columns: .4fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.cw-names {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.coursework-texts {
+    grid-area: 1 / 2 / 2 / 3;
+    padding: 10px;
+}
+
+.cw-names ul {
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-right: 2px solid antiquewhite;
+    max-width: 250px;
+    height: 270px;
+}
+
+.cw-names li {
+    color: rgb(202, 196, 188);
+    font-size: 1.2em;
+    font-family: monospace;
+    padding: 5px 0;
+    transition: 0.22s ease-in-out;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cw-names li:hover {
+    font-style: italic;
+    color: #395ab4;
+    transform: translateX(18px);
+}
+
+.cw-textbox {
+    text-align: center;
+}
+
+.cw-textbox h3 {
+    font-family: 'Second Causes';
+    color: antiquewhite;
+    font-size: .9em;
+}
+
+
+.cw-textbox img{
+    max-height: 180px;
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: max-height 0.3s ease-in-out;
+    object-fit: cover;
+    
+}
+
+.cw-textbox img:hover {
+    max-height: 600px;
+}
+
     /* COURSEWORK END */
 
     /* PORTFOLIO START */
