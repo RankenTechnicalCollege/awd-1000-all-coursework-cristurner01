@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {nanoid} from 'nanoid'
+import './AddStudent.css'
 
 function AddStudent(props) {
   //id, first name, last name, email, photo
@@ -16,7 +17,7 @@ function AddStudent(props) {
       "lastName":lastName, 
       "email":email, 
       "image":URL.createObjectURL(selectedFile),
-      "gradYear":gradYear
+      "gradYear":parseInt(gradYear)
     }
     props.addStudent(newStudent)
   }
@@ -27,7 +28,8 @@ function AddStudent(props) {
 
   return (
     <>
-    <div className='row'>
+    <div className='row mt-5' id='addStudent'>
+      <h3>Add Student</h3>
       <div className='col-md-2'>
         <label htmlFor='txtFirstName' className='form-label'>First Name: </label>
         <input type='text' id='txtFirstName' placeholder='First Name' className='form-control' onChange={(e) => setFirstName(e.currentTarget.value)} value={firstName}></input>
