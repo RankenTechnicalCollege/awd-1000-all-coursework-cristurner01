@@ -3,9 +3,9 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import {nanoid} from 'nanoid'
 import AddStudent from './components/AddStudent'
 import Student from './components/Student'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import _ from 'lodash'
-//import { FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-//import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import './App.css'
 
 function App() {
@@ -16,7 +16,16 @@ function App() {
   const [gradYear, setGradYear] = useState('');
 
   useEffect(() => {
-    saveStudents(students);
+    if(localStorage){
+      const studentsLocalStorage = JSON.parse(localStorage.getItem('students'));
+
+      if(studentsLocalStorage){
+        saveStudents(studentsLocalStorage);
+      }else{
+        saveStudents(students);
+      }
+    }
+
   }, []);
 
   const addStudent = (newStudent) => {
@@ -27,11 +36,20 @@ function App() {
   const saveStudents = (students) => {
     setAllStudents(students);
     setSearchResults(students);
+    if(localStorage){
+      localStorage.setItem('students', JSON.stringify(students));
+      console.log("saved to local storage");
+    }
   }
 
   const removeStudent = (studentToDelete) => {
     const updatedStudentArray = allStudents.filter(student => student.id !== studentToDelete.id);
     saveStudents(updatedStudentArray);
+  }
+
+  const updateStudent = (updatedStudent) => {
+    const updatedStudentArray = allStudents.map(student => student.id === updatedStudent.id ? {...student, ...updatedStudent} : student);
+    saveStudents(updatedStudentArray)
   }
 
   const searchStudents = () => {
@@ -141,7 +159,7 @@ function App() {
         {searchResults && searchResults.map((student) => 
         (
           <div className='col-lg-2' key={student.id}>
-            <Student student={student} removeStudent={removeStudent}/>
+            <Student student={student} removeStudent={removeStudent} updateStudent={updateStudent}/>
           </div>
         ))}
       {/*!allStudents && <button type='button' className='btn btn-lg btn-success' onClick={() => saveStudents(students)}>Save Students</button>*/}
@@ -159,7 +177,7 @@ function App() {
           </select>
         </div>
         <div className='col-md-4'>
-          <button type='button' className='btn btn-primary btn-lg' onClick={searchStudents}>Search Students</button>
+          <button type='button' className='btn btn-primary btn-lg' onClick={searchStudents}>Search Students<FontAwesomeIcon icon={faSearch} /></button>
         </div>
       </div>
       </div>

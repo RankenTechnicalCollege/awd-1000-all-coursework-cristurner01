@@ -39,7 +39,7 @@ function Student(props) {
           <li className='list-group-item text-center'><input type='text' className='form-control' value={lastName} onChange={(e) => setLastName(e.currentTarget.value)} /></li>
           <li className='list-group-item text-center'><input type='text' className='form-control' value={email} onChange={(e) => setEmail(e.currentTarget.value)} /></li>
           <li className='list-group-item text-center'><input type='text' className='form-control' value={gradYear} onChange={(e) => setGradYear(e.currentTarget.value)} /></li>
-          <li className='list-group-item text-center'><button type='button' className='btn btn-secondary' onClick={saveStudent}></button></li>
+          <li className='list-group-item text-center'><button type='button' className='btn btn-secondary' onClick={saveStudent}>Save</button></li>
           </ul>}
       </div>
     </div>

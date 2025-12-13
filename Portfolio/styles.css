@@ -1,6 +1,7 @@
 *  {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -10,6 +11,10 @@ body {
     color: rgb(0, 0, 0);
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 @font-face {
     font-family: 'Second Causes';
     src: url(fonts/SecondCausesDemoBold-vn2JE.otf);
@@ -17,6 +22,17 @@ body {
 @font-face {
     font-family: 'Brskovo';
     src: url(fonts/BrskovoDemoExtrablack-BWgzB.ttf);
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(40%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
 }
 
 h2 {
@@ -41,7 +57,7 @@ h2 {
     border: 1px solid #000000;
     border-bottom: none;
     border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
+    border-top-left-radius: 20px
 }
 
 .logo {
@@ -67,6 +83,7 @@ h2 {
     line-height: 40px;
     font-size: 1.1em;
     grid-area: 1 / 1 / 2 / 2;
+    animation: .8s fadeInUp;
 }
 
 .logo a {
@@ -75,6 +92,7 @@ h2 {
     line-height: 40px;
     color:antiquewhite;
     text-decoration: none;
+    animation: .8s fadeInUp;
 }
 
 .mypicture {
@@ -84,12 +102,12 @@ h2 {
 }
 
 nav {
+    display: block;
     position: relative;
-    left:-8px;
     height: 150px;
-    transform: scale(.9);
+    transform: scale(1);
     top: -10px;
-    
+    animation: .8s fadeInUp;
 }
 
 nav a {
@@ -148,15 +166,16 @@ nav a:nth-child(4) {
 .nav-frame {
     position: relative;
     transform: scale(2.4);
-    top: -40px;
+    top: -50px;
     fill: rgba(103, 109, 139, 0.568);
 }
 
 .its-me {
     position: relative;
     margin: 0 auto;
-    top: -70px;
+    top: -60px;
     width: 300px;
+    animation: .8s fadeInUp;
 }
 
 .its-me img {
@@ -204,11 +223,12 @@ nav a:nth-child(4) {
 
 .content {
     margin: 10px;
-    max-height: 580px;
+    max-height: 1500px;
     padding: 10px;
     background-color: #23262c79;
     border-radius: 15px;
     box-shadow: 0 0 20px #000000;
+    animation: .4s fadeInUp;
 }
 
 .content p {
@@ -217,6 +237,7 @@ nav a:nth-child(4) {
     padding-top: 10px;
     color: rgb(212, 201, 187);
     font-size: 20px;
+    animation: .6s fadeInUp;
 }
     /* ABOUT ME START*/
     /* ABOUT ME END */
@@ -227,10 +248,11 @@ nav a:nth-child(4) {
     /* COURSEWORK START */
 .cw-container {
     display: grid;
-    grid-template-columns: .4fr 1fr;
+    grid-template-columns: .5fr 1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    margin-top: 20px;
 }
 
 .cw-names {
@@ -246,7 +268,6 @@ nav a:nth-child(4) {
     margin-left: 20px;
     margin-top: 20px;
     margin-bottom: 10px;
-    border-right: 2px solid antiquewhite;
     max-width: 250px;
     height: 270px;
 }
@@ -275,8 +296,14 @@ nav a:nth-child(4) {
     font-family: 'Second Causes';
     color: antiquewhite;
     font-size: .9em;
+    margin: 10px 0;
 }
 
+.cw-textbox p {
+    border: 1px solid antiquewhite;
+    padding: 10px;
+    font-size: 1em;
+}
 
 .cw-textbox img{
     max-height: 180px;
@@ -285,11 +312,14 @@ nav a:nth-child(4) {
     display: block;
     transition: max-height 0.3s ease-in-out;
     object-fit: cover;
-    
+    animation: .6s fadeInUp;
+    border: 1px solid antiquewhite;
+    padding: 10px;
 }
 
 .cw-textbox img:hover {
-    max-height: 600px;
+    max-height: 800px;
+    width: 100%;
 }
 
     /* COURSEWORK END */

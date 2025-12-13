@@ -8,7 +8,7 @@ function AddStudent(props) {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [selectedFile, setSelectedFile] = useState();
-  const [gradYear, setGradYear] = useState();
+  const [gradYear, setGradYear] = useState('');
 
   const doWork = () => {
     const newStudent = {
