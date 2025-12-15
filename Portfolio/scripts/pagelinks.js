@@ -47,7 +47,7 @@ function hideCourseworkText() {
   wRescuesText.style = "display: none;";
   dogGroomingText.style = "display: none;";
   beedleSSText.style = "display: none;";
-  boardwalkCText.style = "display: none;";
+  boardwalkCText.style = "display: block;";
   aboutMeText.style = "display: none;";
   hobbyPageText.style = "display: none;";
   HotSpringText.style = "display: none;";

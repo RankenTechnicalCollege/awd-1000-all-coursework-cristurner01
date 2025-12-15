@@ -5,3 +5,7 @@
     padding: 5em;
     color: green;
 }
+
+.card .list-group {
+    flex-grow: 1;
+}

@@ -48,7 +48,7 @@ function App() {
   }
 
   const updateStudent = (updatedStudent) => {
-    const updatedStudentArray = allStudents.map(student => student.id === updatedStudent.id ? {...student, ...updatedStudent} : student);
+    const updatedStudentArray = allStudents.map(student => student.id === updatedStudent.id ? {...student, ...updatedStudent,} : student);
     saveStudents(updatedStudentArray)
   }
 
@@ -56,7 +56,7 @@ function App() {
     let keyWordsArray = [];
 
     if(keyWords){
-      keyWordsArray = keyWords.toLowerCase().split(' ');
+      keyWordsArray = keyWords.toLowerCase().split('');
     }
 
     if(gradYear) {

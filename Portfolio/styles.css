@@ -26,7 +26,7 @@ body::-webkit-scrollbar {
 
 @keyframes fadeInUp {
   0% {
-    transform: translateY(40%);
+    transform: translateY(10%);
     opacity: 0;
   }
   100% {
@@ -40,6 +40,7 @@ h2 {
     font-size: 20px;
     color: antiquewhite;
 }
+
 
 /* Mobile Styles */
     /* MAIN PAGE */
@@ -167,7 +168,8 @@ nav a:nth-child(4) {
     position: relative;
     transform: scale(2.4);
     top: -50px;
-    fill: rgba(103, 109, 139, 0.568);
+    fill: rgb(53, 53, 65);
+    filter: drop-shadow(1px 1px 10px rgb(9, 8, 34));
 }
 
 .its-me {
@@ -223,7 +225,6 @@ nav a:nth-child(4) {
 
 .content {
     margin: 10px;
-    max-height: 1500px;
     padding: 10px;
     background-color: #23262c79;
     border-radius: 15px;
@@ -264,6 +265,10 @@ nav a:nth-child(4) {
     padding: 10px;
 }
 
+.coursework-texts-mobile {
+    display: none;
+}
+
 .cw-names ul {
     margin-left: 20px;
     margin-top: 20px;
@@ -300,26 +305,28 @@ nav a:nth-child(4) {
 }
 
 .cw-textbox p {
-    border: 1px solid antiquewhite;
+    background-color: #10101b85;
     padding: 10px;
     font-size: 1em;
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 90%;
 }
 
 .cw-textbox img{
     max-height: 180px;
-    width: 100%;
+    width: 80%;
     border-radius: 10px;
+    margin: 0 auto;
     display: block;
-    transition: max-height 0.3s ease-in-out;
+    transition: max-height 0.9s ease-in-out;
     object-fit: cover;
     animation: .6s fadeInUp;
-    border: 1px solid antiquewhite;
-    padding: 10px;
 }
 
 .cw-textbox img:hover {
     max-height: 800px;
-    width: 100%;
+    width: 80%;
 }
 
     /* COURSEWORK END */
@@ -328,3 +335,40 @@ nav a:nth-child(4) {
     /* PORTFOLIO END */
 
 /* Mobile Styles END */
+
+
+/* Media Queries */
+
+@media screen and (max-width: 600px) {
+    .cw-container {
+        display: block;
+    }
+
+    .cw-names {
+        display: none;
+    }
+
+    .coursework-texts {
+        display: none;
+    }
+    .coursework-texts-mobile {
+        display: block;
+    }
+    .cw-textbox {
+        margin-bottom: 60px;
+    }
+    .cw-textbox img{
+        max-height: 90%;
+        width: 75%;
+        display: block;
+        transition: none;
+        object-fit: fill;
+        animation: .6s fadeInUp;
+        filter: drop-shadow(1px 1px 10px);
+        margin: 0 auto;
+    }
+    .cw-textbox img:hover {
+        max-height: 90%;
+        width: 75%;
+    }
+}
