@@ -328,10 +328,45 @@ nav a:nth-child(4) {
     max-height: 800px;
     width: 80%;
 }
-
     /* COURSEWORK END */
 
     /* PORTFOLIO START */
+.pf-textbox {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.pf-textbox h3 {
+    font-family: 'Second Causes';
+    color: antiquewhite;
+    font-size: .9em;
+    margin: 10px 0;
+}
+
+.pf-textbox p {
+    background-color: #10101b85;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.pf-textbox img{
+    max-height: 180px;
+    width: 80%;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: block;
+    transition: max-height 0.9s ease-in-out;
+    object-fit: cover;
+    animation: .6s fadeInUp;
+}
+
+.pf-textbox img:hover {
+    max-height: 800px;
+    width: 80%;
+}
     /* PORTFOLIO END */
 
 /* Mobile Styles END */
