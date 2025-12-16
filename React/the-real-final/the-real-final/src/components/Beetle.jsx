@@ -1,0 +1,52 @@
+import React, {useState, useEffect} from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFloppyDisk, faMagicWandSparkles, faWarning } from '@fortawesome/free-solid-svg-icons';
+import './Beetle.css'
+
+
+function Beetle(props) {
+  const [editMode, setEditMode] = useState(false);
+  const [commonName, setCommonName] = useState('');
+  const [scientificName, setScientificName] = useState('');
+  const [habitat, setHabitat] = useState('');
+  const [yearCaught, setYearCaught] = useState('');
+
+  useEffect(() => {
+    setCommonName(props.beetle.commonName);
+    setScientificName(props.beetle.scientificName);
+    setHabitat(props.beetle.habitat);
+    setYearCaught(props.beetle.yearCaught);
+  }, []);
+
+  const saveBeetle = () => {
+    setEditMode(false);
+    const updatedBeetle = {commonName:commonName, scientificName:scientificName, habitat:habitat, yearCaught:parseInt(yearCaught), id:props.beetle.id, image:props.beetle.image};
+    props.updateBeetle(updatedBeetle);
+  }
+
+  return (
+    <div>
+      <div className='card'>
+        <img src={props.beetle.image} alt='missing image' className='card-image-top mx-auto'/>
+        {!editMode &&
+        <ul className='list-group list-group-flush'>
+          <li className='list-group-item'>{props.beetle.commonName}</li>
+          <li className='list-group-item'>{props.beetle.scientificName}</li>
+          <li className='list-group-item'>Habitat:<br></br>{'' + props.beetle.habitat}</li>
+          <li className='list-group-item'>Year Caught: {props.beetle.yearCaught}</li>
+          <button type='button' className='btn btn-sm btn-danger' onClick={() => props.removeBeetle(props.beetle)}>Delete Beetle &nbsp;<FontAwesomeIcon icon= {faWarning}></FontAwesomeIcon></button>
+          <button type='button' className='btn btn-sm btn-warning' onClick={() => setEditMode(true)}>Edit Beetle<FontAwesomeIcon icon={faMagicWandSparkles}></FontAwesomeIcon></button>
+        </ul>}
+        {editMode && <ul className='list-group list-group-flush'>
+          <li className='list-group-item text-center'><input type='text' className='form-control' value={commonName} onChange={(e) => setCommonName(e.currentTarget.value)} /></li>
+          <li className='list-group-item text-center'><input type='text' className='form-control' value={scientificName} onChange={(e) => setScientificName(e.currentTarget.value)} /></li>
+          <li className='list-group-item text-center'><input type='text' className='form-control' value={habitat} onChange={(e) => setHabitat(e.currentTarget.value)} /></li>
+          <li className='list-group-item text-center'><input type='text' className='form-control' value={yearCaught} onChange={(e) => setYearCaught(parseInt(e.currentTarget.value))} /></li>
+          <li className='list-group-item text-center'><button type='button' className='btn btn-secondary' onClick={saveBeetle}>Save<FontAwesomeIcon icon={faFloppyDisk}></FontAwesomeIcon></button></li>
+          </ul>}
+      </div>
+    </div>
+  )
+}
+
+export default Beetle
