@@ -13,10 +13,13 @@ function App() {
   const [searchResults, setSearchResults] = useState([]);
   const [keyWords, setKeyWords] = useState('');
   const [yearCaught, setYearCaught] = useState('');
+  const [habitat, setHabitat] = useState('');
+  const [selectedBeetle, setSelectedBeetle] = useState(null);
+  const [showAddBeetle, setShowAddBeetle] = useState(false);
 
   useEffect(() => {
     if(localStorage) {
-      const beetlesLocalStorage = JSON.parse(localStorage.getItem('students'));
+      const beetlesLocalStorage = JSON.parse(localStorage.getItem('beetles'));
 
       if(beetlesLocalStorage){
         saveBeetles(beetlesLocalStorage);
@@ -29,6 +32,7 @@ function App() {
   const addBeetle = (newBeetle) => {
     const updatedBeetles = [...allBeetles, newBeetle];
     saveBeetles(updatedBeetles);
+    setShowAddBeetle(false);
   }
 
   const saveBeetles = (beetles) => {
@@ -54,11 +58,15 @@ function App() {
     let keyWordsArray = [];
 
     if(keyWords){
-      keyWordsArray = keyWords.toLowerCase().split('');
+      keyWordsArray = keyWords.toLowerCase().split(' ');
     }
 
     if(yearCaught){
       keyWordsArray.push(yearCaught.toString());
+    }
+
+    if(habitat){
+      keyWordsArray.push(habitat.toLowerCase());
     }
 
     if(keyWordsArray.length > 0){
@@ -66,6 +74,7 @@ function App() {
         for(const word of keyWordsArray){
           if(beetle.commonName.toLowerCase().includes(word) ||
           beetle.scientificName.toLowerCase().includes(word) ||
+          beetle.habitat.some(hab => hab.toLowerCase().includes(word)) ||
           beetle.yearCaught === parseInt(word)) {
             return true;
           }
@@ -116,35 +125,61 @@ function App() {
     image: "images/minotaurBeetle.jpg"
   }
   ]
-
+//hi
   return (
     <div className='container'>
-        <div className='row' id='allBeetles'>
-          <h3>Current Beetles</h3>
-          {searchResults && searchResults.map((beetle) =>
-          (
-            <div className='col-lg-2' key={beetle.id}>
-              <Beetle beetle={beetle} removeBeetle={removeBeetle} updateBeetle={updateBeetle}/>
-            </div>
-          ))}
-          <AddBeetle addBeetle={addBeetle}/>
+      <div className='beetle-journal'>
+         
+        <div className='left-page'>
           <div className='row my-4' id='searchBeetles'>
-            <h3>Search Beetles</h3>
-            <div className='col-md-4'>
-              <label htmlFor='txtKeyWords'>Search by common name or scientific name</label>
-              <input type='text' className='form-control' placeholder='Enter common or scientific name' onChange={(e) => setKeyWords(e.currentTarget.value)} value={keyWords}></input>
+            <h3>Search:</h3>
+            <div className='searchInput'>
+              <input type='text' className='form-control search-label' placeholder='Enter a name' onChange={(e) => setKeyWords(e.currentTarget.value)} value={keyWords}></input>
             </div>
-            <div className='col-md-4'>
-              <select value={yearCaught} onChange={(e) => setYearCaught(e.currentTarget.value)} className='form-select'>
+            <div className='searchInput'>
+              <select value={yearCaught} onChange={(e) => setYearCaught(e.currentTarget.value)} className='form-select search-label'>
                 <option value=''>Select Year</option>
                 {_(allBeetles).map(beetle => beetle.yearCaught).sort().uniq().map(year => <option key={year} value={year}>{year}</option>).value()}
               </select>
             </div>
-            <div className='col-md-4'>
-              <button type='button' className='btn btn-primary btn-lg' onClick={searchBeetles}>Search Beetles<FontAwesomeIcon icon={faSearch} /></button>
+            <div className='searchInput'>
+              <select className='form-select search-label' value={habitat} onChange={(e) => setHabitat(e.currentTarget.value)}>
+                <option value=''>Select Habitat</option>
+                {_(allBeetles).flatMap(beetle => beetle.habitat).sort().uniq().map(hab => (<option key={hab} value={hab}>{hab}</option>)).value()}
+              </select>
+            </div>
+            <div className='col-md-4 button'>
+              <button type='button' className='btn btn-sm' onClick={searchBeetles}><FontAwesomeIcon icon={faSearch} /></button>
             </div>
           </div>
+
+          <div className='row' id='allBeetles'>
+            <h3>Beetles Owned</h3>
+            {searchResults && searchResults.map((beetle) =>
+            (
+              <div className='col-lg-2 the-beetles' tabIndex="0" key={beetle.id} onClick={() => setSelectedBeetle(beetle)}>
+                <span>{beetle.commonName}</span>
+                <span>({beetle.yearCaught})</span>
+              </div>
+            ))}
+            <div>
+              <button className='btn btn-sm btn-success' onClick={() => setShowAddBeetle(true)}>New Entry</button>
+            </div>
+            {showAddBeetle && <AddBeetle addBeetle={addBeetle}/>}
+          </div >
         </div>
+
+        <div className='right-page'>
+          <div className="row my-4" id='selectedBeetle'>
+            <h3>Selected Beetle</h3>
+            {selectedBeetle ? (
+              <Beetle beetle={selectedBeetle} removeBeetle={removeBeetle} updateBeetle={updateBeetle}/>
+            ) : (<p>Select a beetle to view full details</p>)}
+          </div>
+        </div>
+        
+        
+      </div>  
     </div>
   )
 }
