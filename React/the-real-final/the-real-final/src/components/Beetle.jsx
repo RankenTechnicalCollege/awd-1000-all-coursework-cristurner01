@@ -25,17 +25,21 @@ function Beetle(props) {
   }
 
   return (
-    <div>
-      <div className='card'>
-        <img src={props.beetle.image} alt='missing image' className='card-image-top mx-auto'/>
+    <div className='card-border'>
+      <div className='the-card'>
+        <div className='cardImage'>
+          <img src={props.beetle.image} alt='missing image'/>
+        </div>
         {!editMode &&
-        <ul className='list-group list-group-flush'>
-          <li className='list-group-item'>{props.beetle.commonName}</li>
-          <li className='list-group-item'>{props.beetle.scientificName}</li>
-          <li className='list-group-item'>Habitat:<br></br>{'' + props.beetle.habitat}</li>
-          <li className='list-group-item'>Year Caught: {props.beetle.yearCaught}</li>
-          <button type='button' className='btn btn-sm btn-danger' onClick={() => props.removeBeetle(props.beetle)}>Delete Beetle &nbsp;<FontAwesomeIcon icon= {faWarning}></FontAwesomeIcon></button>
-          <button type='button' className='btn btn-sm btn-warning' onClick={() => setEditMode(true)}>Edit Beetle<FontAwesomeIcon icon={faMagicWandSparkles}></FontAwesomeIcon></button>
+        <ul className='list-group'>
+          <li className='list-group-item text-center cName'>{props.beetle.commonName}</li>
+          <li className='list-group-item text-center sName'>{props.beetle.scientificName}</li>
+          <li className='list-group-item text-center habitat'>Habitat:<br></br>{props.beetle.habitat}</li>
+          <li className='list-group-item text-center yCaught'>Year Caught: {props.beetle.yearCaught}</li>
+          <div className='the-btns'>
+            <button type='button' className='btn btn-sm btn-danger btn1' onClick={() => props.removeBeetle(props.beetle)}>Delete &nbsp;<FontAwesomeIcon icon= {faWarning}></FontAwesomeIcon></button>
+            <button type='button' className='btn btn-sm btn-warning btn2' onClick={() => setEditMode(true)}>Edit &nbsp;<FontAwesomeIcon icon={faMagicWandSparkles}></FontAwesomeIcon></button>
+          </div>
         </ul>}
         {editMode && <ul className='list-group list-group-flush'>
           <li className='list-group-item text-center'><input type='text' className='form-control' value={commonName} onChange={(e) => setCommonName(e.currentTarget.value)} /></li>

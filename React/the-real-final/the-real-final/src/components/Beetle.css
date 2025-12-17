@@ -1,3 +1,100 @@
-img {
-  width: 200px;
+.card-border{
+  border: 1px solid rgb(230, 201, 163);
+  width: 450px;
+  height:630px;
+  box-shadow:inset 0 0 20px rgba(141, 70, 23, 0.459);
+  margin: 0 auto;
+  position: relative;
+  top:20px;
 }
+
+.the-card {
+  position: relative;
+  background-color: rgb(211, 193, 183);
+  width:350px;
+  height:370px;
+  border-radius: 4%;
+  top:230px;
+  margin: 0 auto;
+  filter: drop-shadow(1px 1px 20px rgba(138, 122, 109, 0.815));
+}
+
+.the-card .btn{
+  width:90px;
+  border-radius: 0px;
+  
+}
+
+.the-btns {
+  margin-top: 20px;
+  filter: drop-shadow(1px 1px 10px rgb(170, 110, 61));
+}
+
+.the-btns .btn1{
+  float: left;
+  margin-left: 20px;
+  background-color: rgba(230, 56, 44, 0.342);
+  border-left: none;
+  border-right: none;
+  transition: all 0.1s ease-in-out;
+}
+
+.the-btns .btn1:hover{
+  background-color: rgba(255, 56, 42, 0.664);
+  transform: scale(1.1);
+}
+
+.the-btns .btn2{
+  float: right;
+  margin-right: 20px;
+  background-color: rgba(230, 187, 44, 0.342);
+  border-left: none;
+  border-right: none;
+  transition: all 0.1s ease-in-out;
+}
+
+.the-btns .btn2:hover{
+  background-color: rgba(253, 237, 17, 0.527);
+  transform: scale(1.1);
+}
+
+.cardImage {
+  position: relative;
+  width: 250px;
+  overflow: hidden;
+  height: 250px;
+  border-radius: 50%;
+  outline: 10px solid rgb(114, 104, 96);
+  border: 2px solid white;
+  margin: 0 auto;
+  bottom: 190px;
+}
+
+.cardImage img {
+  width:100%;
+}
+
+.cName{
+  font-size: 30px;
+}
+
+.yCaught{
+  font-size: 18px
+}
+.cName, .sName, .habitat, .yCaught {
+  border: none;
+}
+
+.the-card .list-group{
+  position: relative;
+  bottom: 170px;
+  border-radius: 20px;
+}
+
+.the-card .list-group-item{
+  background-color: rgb(211, 193, 183);
+  color: rgba(73, 73, 88, 0.733);
+  border-radius: 20px;
+  text-shadow: 0 0 5px rgba(97, 86, 86, 0.384);
+}
+

@@ -127,7 +127,7 @@ function App() {
   ]
 //hi
   return (
-    <div className='container'>
+    <div className='bigFatBox'>
       <div className='beetle-journal'>
          
         <div className='left-page'>
@@ -157,9 +157,9 @@ function App() {
             <h3>Beetles Owned</h3>
             {searchResults && searchResults.map((beetle) =>
             (
-              <div className='col-lg-2 the-beetles' tabIndex="0" key={beetle.id} onClick={() => setSelectedBeetle(beetle)}>
-                <span>{beetle.commonName}</span>
-                <span>({beetle.yearCaught})</span>
+              <div className='the-beetles' tabIndex="0" key={beetle.id} onClick={() => setSelectedBeetle(beetle)}>
+                <span id='theName'>{beetle.commonName}</span>
+                <span id='theYear'>({beetle.yearCaught})</span>
               </div>
             ))}
             <div>
