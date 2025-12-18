@@ -14,13 +14,13 @@ function Beetle(props) {
   useEffect(() => {
     setCommonName(props.beetle.commonName);
     setScientificName(props.beetle.scientificName);
-    setHabitat(props.beetle.habitat);
+    setHabitat(Array.isArray(props.beetle.habitat) ? props.beetle.habitat.join(', ') : props.beetle.habitat);
     setYearCaught(props.beetle.yearCaught);
-  }, []);
+  }, [props.beetle]);
 
   const saveBeetle = () => {
     setEditMode(false);
-    const updatedBeetle = {commonName:commonName, scientificName:scientificName, habitat:habitat, yearCaught:parseInt(yearCaught), id:props.beetle.id, image:props.beetle.image};
+    const updatedBeetle = {commonName:commonName, scientificName:scientificName, habitat:habitat.split(',').map(hab => hab.trim()).filter(Boolean), yearCaught:parseInt(yearCaught), id:props.beetle.id, image:props.beetle.image};
     props.updateBeetle(updatedBeetle);
   }
 
@@ -34,7 +34,7 @@ function Beetle(props) {
         <ul className='list-group'>
           <li className='list-group-item text-center cName'>{props.beetle.commonName}</li>
           <li className='list-group-item text-center sName'>{props.beetle.scientificName}</li>
-          <li className='list-group-item text-center habitat'>Habitat:<br></br>{props.beetle.habitat}</li>
+          <li className='list-group-item text-center habitat'>Habitat:<br></br>{Array.isArray(props.beetle.habitat) ? props.beetle.habitat.join(", ") : props.beetle.habitat}</li>
           <li className='list-group-item text-center yCaught'>Year Caught: {props.beetle.yearCaught}</li>
           <div className='the-btns'>
             <button type='button' className='btn btn-sm btn-danger btn1' onClick={() => props.removeBeetle(props.beetle)}>Delete &nbsp;<FontAwesomeIcon icon= {faWarning}></FontAwesomeIcon></button>

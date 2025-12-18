@@ -28,6 +28,7 @@
 .the-btns {
   margin-top: 20px;
   filter: drop-shadow(1px 1px 10px rgb(170, 110, 61));
+  font-family: "pixel";
 }
 
 .the-btns .btn1{
@@ -74,15 +75,17 @@
   width:100%;
 }
 
-.cName{
-  font-size: 30px;
-}
-
 .yCaught{
   font-size: 18px
 }
 .cName, .sName, .habitat, .yCaught {
   border: none;
+  font-family: "pixel";
+}
+
+.cName{
+  font-size: 30px;
+  font-weight: 600;
 }
 
 .the-card .list-group{
@@ -93,7 +96,7 @@
 
 .the-card .list-group-item{
   background-color: rgb(211, 193, 183);
-  color: rgba(73, 73, 88, 0.733);
+  color: rgba(88, 64, 44, 0.733);
   border-radius: 20px;
   text-shadow: 0 0 5px rgba(97, 86, 86, 0.384);
 }

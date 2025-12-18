@@ -1,0 +1,72 @@
+#addBeetle {
+    border: 1px solid rgba(167, 152, 140, 0.712);
+    width: 430px;
+    box-shadow: 0 0 15px rgba(150, 103, 50, 0.486);
+    padding: 10px;
+    border-right: none;
+    border-left: none;
+    margin-top: 20px;
+    background-color: rgb(235, 225, 211);
+}
+
+#addBeetle h3 {
+    font-size: 20px;
+    
+}
+
+.add-labels {
+    color: rgb(110, 96, 79);
+    margin-bottom: 0;
+    font-family: "pixel";
+}
+
+.add-inputs {
+    padding: 2px;
+    font-size: 12px;
+    width: 100px;
+    border: none;
+    border-top: 1px solid rgba(185, 49, 25, 0.322);
+    border-bottom: 1px solid rgba(185, 49, 25, 0.342);
+    border-radius: 2px;
+    background-color: rgba(214, 161, 140, 0.171);
+    box-shadow: 0 0 10px rgba(214, 89, 39, 0.26);
+    margin-bottom: 10px;
+    font-family: "pixel";
+}
+
+.add-row1 {
+    display: flex;
+    justify-content:space-evenly;
+    margin: 0 auto;
+}
+
+.row-item {
+    width:200px;
+}
+
+.add-row2 {
+    padding-left: 20px;
+}
+
+#btnAdd {
+    padding: 2px 5px;
+    font-size: 12px;
+    border-radius: 2px;
+    border: none;
+    border-top: 1px solid rgba(0, 0, 255, 0.514);
+    border-bottom: 1px solid rgba(0, 0, 255, 0.384);
+    background-color: rgba(0, 89, 255, 0.288);
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 0 20px rgba(131, 73, 39, 0.514);
+    font-family: "pixel";
+}
+
+#btnAdd:hover {
+    transform: scale(1.1);
+    background-color: #0066ff88;
+    border-top: 1px solid #001679af;
+    border-bottom: 1px solid #001679af;
+}

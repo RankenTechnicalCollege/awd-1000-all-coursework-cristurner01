@@ -14,7 +14,7 @@ function App() {
   const [keyWords, setKeyWords] = useState('');
   const [yearCaught, setYearCaught] = useState('');
   const [habitat, setHabitat] = useState('');
-  const [selectedBeetle, setSelectedBeetle] = useState(null);
+  const [selectedBeetleId, setSelectedBeetleId] = useState(null);
   const [showAddBeetle, setShowAddBeetle] = useState(false);
 
   useEffect(() => {
@@ -54,6 +54,10 @@ function App() {
     saveBeetles(updatedBeetleArray)
   }
 
+  const selectedBeetle = allBeetles.find(
+    beetle => beetle.id === selectedBeetleId
+  )
+
   const searchBeetles = () => {
     let keyWordsArray = [];
 
@@ -72,9 +76,9 @@ function App() {
     if(keyWordsArray.length > 0){
       const searchResults = allBeetles.filter(beetle => {
         for(const word of keyWordsArray){
-          if(beetle.commonName.toLowerCase().includes(word) ||
-          beetle.scientificName.toLowerCase().includes(word) ||
-          beetle.habitat.some(hab => hab.toLowerCase().includes(word)) ||
+          if(beetle.commonName?.toLowerCase().includes(word) ||
+          beetle.scientificName?.toLowerCase().includes(word) ||
+          (Array.isArray(beetle.habitat) && beetle.habitat.some(hab => hab.toLowerCase().includes(word))) ||
           beetle.yearCaught === parseInt(word)) {
             return true;
           }
@@ -111,7 +115,7 @@ function App() {
     image: "images/whirligigBeetle.jpg"
   }, {
     id: nanoid(),
-    commonName: "Harlequin Ladybird Beetle",
+    commonName: "Harlequin Ladybird",
     scientificName: "Harmonia Axyridis",
     habitat: ["grassland", "freshwater", "farmland", "wetlands", "woodland", "towns and gardens"],
     yearCaught: 2014, 
@@ -123,11 +127,26 @@ function App() {
     habitat: ["grassland", "heathland", "moorland", "farmland", "coastal"],
     yearCaught: 2007,
     image: "images/minotaurBeetle.jpg"
+  }, {
+    id: nanoid(),
+    commonName: "King Diving Beetle",
+    scientificName: "Dytiscus Dimidiatus",
+    habitat: ["Lowland fen"],
+    yearCaught: 2004,
+    image: "images/DivingBeetle.jpg"
+  }, {
+    id: nanoid(),
+    commonName: "14-Spot Ladybird",
+    scientificName: "Propylea quattuordecimpunctata",
+    habitat: ["grassland", "farmland", "woodland", "towns and gardens"],
+    yearCaught: 2013,
+    image: "images/14SpotLady.jpg"
   }
   ]
 //hi
   return (
     <div className='bigFatBox'>
+      <h1>Beetle Catching Catalog</h1>
       <div className='beetle-journal'>
          
         <div className='left-page'>
@@ -157,13 +176,13 @@ function App() {
             <h3>Beetles Owned</h3>
             {searchResults && searchResults.map((beetle) =>
             (
-              <div className='the-beetles' tabIndex="0" key={beetle.id} onClick={() => setSelectedBeetle(beetle)}>
+              <div className='the-beetles' tabIndex="0" key={beetle.id} onClick={() => setSelectedBeetleId(beetle.id)}>
                 <span id='theName'>{beetle.commonName}</span>
                 <span id='theYear'>({beetle.yearCaught})</span>
               </div>
             ))}
             <div>
-              <button className='btn btn-sm btn-success' onClick={() => setShowAddBeetle(true)}>New Entry</button>
+              <button className='btn btn-sm btn-success entry-btn' onClick={() => setShowAddBeetle(true)}>New Entry</button>
             </div>
             {showAddBeetle && <AddBeetle addBeetle={addBeetle}/>}
           </div >
