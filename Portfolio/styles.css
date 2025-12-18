@@ -244,6 +244,25 @@ nav a:nth-child(4) {
     /* ABOUT ME END */
 
     /* CONTACT START */
+#contact .content{
+    text-align: center;
+}
+
+.jotform-contain{
+    max-width:475px;
+    overflow: hidden;
+    border-radius: 20px;
+    height:550px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.jot-iframe{
+    position: relative;
+    right:12px;
+    bottom: 12px;
+    width: 500px;
+}
     /* CONTACT END */
 
     /* COURSEWORK START */
@@ -374,6 +393,26 @@ nav a:nth-child(4) {
 
 /* Media Queries */
 
+
+@media screen and (max-width: 530px) {
+    .jotform-contain{
+        width: 375px;
+    }
+    .jot-iframe{
+        width: 400px
+    }
+}
+
+@media screen and (max-width: 455px) {
+    .jotform-contain{
+        width: 275px;
+        height: 530px
+    }
+    .jot-iframe{
+        width: 300px;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .cw-container {
         display: block;
@@ -407,3 +446,4 @@ nav a:nth-child(4) {
         width: 75%;
     }
 }
+
