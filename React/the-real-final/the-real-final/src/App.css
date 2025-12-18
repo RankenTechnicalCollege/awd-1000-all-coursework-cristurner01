@@ -9,7 +9,15 @@ h3, h1 {
 @font-face {
     font-family: "Pixel Script";
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     src: url(assets/PixelScriptRegular-0WnDG.otf);
+=======
+    src: url(./assets/PixelScriptRegular-0WnDG.otf);
+>>>>>>> Stashed changes
+=======
+    src: url(./assets/PixelScriptRegular-0WnDG.otf);
+>>>>>>> Stashed changes
 =======
     src: url(./assets/PixelScriptRegular-0WnDG.otf);
 >>>>>>> Stashed changes
@@ -18,7 +26,15 @@ h3, h1 {
 @font-face {
     font-family: "Pixel";
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     src: url(assets/pixel-font/Pixel-y14Y.ttf);
+=======
+    src: url(./assets/pixel-font/Pixel-y14Y.ttf);
+>>>>>>> Stashed changes
+=======
+    src: url(./assets/pixel-font/Pixel-y14Y.ttf);
+>>>>>>> Stashed changes
 =======
     src: url(./assets/pixel-font/Pixel-y14Y.ttf);
 >>>>>>> Stashed changes
