@@ -28,7 +28,7 @@
 .the-btns {
   margin-top: 20px;
   filter: drop-shadow(1px 1px 10px rgb(170, 110, 61));
-  font-family: "pixel";
+  font-family: "Pixel";
 }
 
 .the-btns .btn1{
@@ -86,6 +86,7 @@
 .cName{
   font-size: 30px;
   font-weight: 600;
+  font-family: "Pixel Script";
 }
 
 .the-card .list-group{
